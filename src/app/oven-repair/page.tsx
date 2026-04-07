@@ -129,8 +129,8 @@ export default function OvenRepairPage() {
           </div>
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
-              src="/why-1.png"
-              alt="Oven repair technician at work"
+              src="/oven-hero.jpeg"
+              alt="Viking ovens and ranges"
               fill
               className="object-cover"
               priority
