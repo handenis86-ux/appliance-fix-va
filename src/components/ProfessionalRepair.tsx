@@ -51,6 +51,14 @@ export default function ProfessionalRepair() {
             </ul>
           </div>
         </div>
+        <div className="text-center mt-10">
+          <a
+            href="#order"
+            className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+          >
+            Order Service Now
+          </a>
+        </div>
       </div>
     </section>
   );

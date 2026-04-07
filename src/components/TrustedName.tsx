@@ -2,7 +2,7 @@ export default function TrustedName() {
   return (
     <section className="py-14">
       <div className="max-w-[1160px] mx-auto px-6">
-        <div className="max-w-[780px]">
+        <div className="max-w-[780px] mx-auto">
           <h2 className="text-[clamp(1.4rem,3vw,1.8rem)] text-slate-900 mb-1">
             <span className="font-extrabold">Appliance Fix VA:</span>{" "}
             <span className="font-normal">The Trusted Name For Appliance Repair in Arlington</span>
