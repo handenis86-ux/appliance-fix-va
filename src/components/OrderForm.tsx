@@ -2,7 +2,7 @@
 
 export default function OrderForm() {
   return (
-    <section id="order" className="py-12">
+    <section id="order" className="pt-4 pb-12">
       <div className="max-w-[1160px] mx-auto px-6 text-center">
         <h2 className="text-[clamp(1.4rem,2.8vw,1.85rem)] font-bold text-slate-900 mb-2">
           Order Service Now
