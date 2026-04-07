@@ -213,11 +213,22 @@ export default function OvenRepairPage() {
                 Oven breakdowns can significantly disrupt your daily life. At Appliance Fix VA, we understand how inconvenient this can be. That&apos;s why we take pride in providing speedy and reliable appliance repairs at a fair price.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {features.map((f) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+              {features.map((f, i) => {
+                const total = features.length;
+                const lastRow = total % 3;
+                const isInLastRow = lastRow !== 0 && i >= total - lastRow;
+                let lgClass = "lg:col-span-2";
+                if (isInLastRow && lastRow === 2) {
+                  if (i === total - 2) lgClass = "lg:col-span-2 lg:col-start-2";
+                  else if (i === total - 1) lgClass = "lg:col-span-2";
+                } else if (isInLastRow && lastRow === 1) {
+                  lgClass = "lg:col-span-2 lg:col-start-3";
+                }
+                return (
                 <div
                   key={f.title}
-                  className="bg-white rounded-xl border border-slate-200 p-6 flex gap-4 items-start"
+                  className={`bg-white rounded-xl border border-slate-200 p-6 flex gap-4 items-start ${lgClass}`}
                 >
                   <div className="min-w-[44px] h-11 bg-blue rounded-lg flex items-center justify-center">
                     {f.icon}
@@ -227,7 +238,8 @@ export default function OvenRepairPage() {
                     <p className="text-[13px] text-slate-500 leading-[1.6]">{f.desc}</p>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
