@@ -10,7 +10,7 @@ const items = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    image: "/repair-1.jpg",
+    image: "/why-1.png",
     imagePosition: "right" as const,
   },
   {
@@ -21,9 +21,8 @@ const items = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    image: "/hero.jpg",
+    image: "/why-2.png",
     imagePosition: "left" as const,
-    objectPosition: "center",
   },
   {
     title: "Same-Day Repairs",
@@ -33,7 +32,7 @@ const items = [
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    image: "/repair-2.jpg",
+    image: "/why-3.png",
     imagePosition: "right" as const,
   },
 ];
