@@ -334,7 +334,43 @@ export default function OvenRepairPage() {
         </section>
 
         {/* FAQ */}
-        <FAQ />
+        <FAQ
+          title="Oven & Stove Repair – Frequently Asked Questions"
+          items={[
+            {
+              q: "Oven Not Heating Properly",
+              a: "If your food takes too long to cook or stays undercooked, the issue is often a burned-out heating element (electric ovens), a faulty igniter (gas ovens), or a defective thermostat or temperature sensor. Don't wait — this problem usually gets worse over time.",
+            },
+            {
+              q: "Stove Burners Not Working",
+              a: "If a burner won't turn on or heats unevenly, possible causes include a damaged burner coil or element, clogged gas ports, or a faulty ignition switch or spark module. Tip: Uneven heat can ruin cookware and food quality.",
+            },
+            {
+              q: "Oven Not Turning On",
+              a: "If your oven is completely unresponsive, common causes include a tripped circuit breaker, a faulty control board, or wiring/power supply issues. Quick fix: Check your breaker first — if that's not it, you likely need service.",
+            },
+            {
+              q: "Oven Temperature Is Inaccurate",
+              a: "If your food burns or remains undercooked, this may be due to a faulty temperature sensor, calibration issues, or a failing thermostat. Warning: This can lead to consistently wasted food.",
+            },
+            {
+              q: "Gas Smell or Ignition Problems",
+              a: "If you notice a gas smell or delayed ignition, causes may include a weak or dirty igniter, gas valve issues, or blocked burner ports. Safety Alert: This is dangerous — call for service immediately.",
+            },
+            {
+              q: "Control Panel or Knobs Not Responding",
+              a: "If you can't adjust temperature or turn on your cooktop, the issue may be worn knobs, a failed control board, or moisture/grease damage. Common in older units or after spills.",
+            },
+            {
+              q: "Self-Cleaning Function Not Working",
+              a: "If your oven won't lock, unlock, or start cleaning, it may be due to a faulty door latch, control board issues, or overheating protection. Important: Avoid forcing the door — it can cause more damage.",
+            },
+            {
+              q: "Oven Door Won't Close Properly",
+              a: "If heat escapes or cooking is uneven, common causes include a worn-out door seal, broken hinges, or a misaligned door. This increases energy bills and cooking time.",
+            },
+          ]}
+        />
 
         {/* NEED FAST REPAIR CTA */}
         <section className="py-16 bg-navy text-center">

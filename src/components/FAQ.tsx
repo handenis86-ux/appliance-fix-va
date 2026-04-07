@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const faqs = [
+const defaultFaqs = [
   {
     q: "How quickly can I schedule repair?",
     a: "We offer same-day or next-day service appointments across Arlington, often completing repairs in a single visit.",
@@ -28,13 +28,24 @@ const faqs = [
   },
 ];
 
-export default function FAQ() {
+interface FAQItem {
+  q: string;
+  a: string;
+}
+
+interface FAQProps {
+  items?: FAQItem[];
+  title?: string;
+}
+
+export default function FAQ({ items, title = "FAQ" }: FAQProps) {
+  const faqs = items ?? defaultFaqs;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section className="py-12 bg-gray-bg">
       <div className="max-w-[1160px] mx-auto px-6">
-        <h2 className="text-center text-2xl font-bold text-slate-900 mb-6">FAQ</h2>
+        <h2 className="text-center text-2xl font-bold text-slate-900 mb-6">{title}</h2>
         <div className="max-w-[820px] mx-auto">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
