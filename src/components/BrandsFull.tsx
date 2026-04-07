@@ -26,7 +26,7 @@ export default function BrandsFull() {
           {/* Left: image */}
           <div className="relative rounded-xl overflow-hidden min-h-[280px] lg:min-h-0 order-2 lg:order-1">
             <Image
-              src="/repair-1.jpg"
+              src="/brands.png"
               alt="Certified appliance repair technician"
               fill
               className="object-cover"
