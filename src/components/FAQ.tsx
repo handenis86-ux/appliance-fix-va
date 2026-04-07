@@ -52,7 +52,7 @@ export default function FAQ() {
                     {i + 1}. {faq.q}
                   </span>
                   <span
-                    className={`flex-shrink-0 w-7 h-7 rounded-full bg-white border border-slate-200 flex items-center justify-center transition-transform ${
+                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-blue flex items-center justify-center transition-transform shadow-sm ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   >
@@ -61,11 +61,10 @@ export default function FAQ() {
                       height="14"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
+                      stroke="#fff"
+                      strokeWidth="3"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-slate-500"
                     >
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
