@@ -1,4 +1,8 @@
-const items = [
+interface ValueStripProps {
+  items?: string[];
+}
+
+const defaultItems: string[] = [
   "Certified Technicians",
   "We Service All Brands & Models",
   "Same & Next Day Appointments",
@@ -13,7 +17,7 @@ function Check() {
   );
 }
 
-export default function ValueStrip() {
+export default function ValueStrip({ items = defaultItems }: ValueStripProps) {
   return (
     <div className="bg-navy border-t border-white/[.08]">
       <div className="max-w-[1160px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

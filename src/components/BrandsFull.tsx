@@ -1,24 +1,41 @@
 import Image from "next/image";
 
-const brands = [
-  "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
-  "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
-  "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
-  "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
-  "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking",
-];
+interface BrandsData {
+  title: string;
+  subtitle: string;
+  description: string;
+  items: string[];
+}
 
-export default function BrandsFull() {
+interface BrandsFullProps {
+  data?: BrandsData;
+}
+
+const defaultData: BrandsData = {
+  title: "Your Local Appliance Service Center",
+  subtitle: "For All Major Brands & Models",
+  description:
+    "It doesn't matter where or when you bought your appliance. Our authorized repair experts service nearly all major appliance models and manufacturers.",
+  items: [
+    "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+    "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+    "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+    "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+    "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking",
+  ],
+};
+
+export default function BrandsFull({ data = defaultData }: BrandsFullProps) {
   return (
     <section className="py-14 bg-gray-bg">
       <div className="max-w-[1160px] mx-auto px-6">
         <div className="text-center mb-10">
           <h2 className="text-[clamp(1.4rem,3vw,1.8rem)] font-bold text-slate-900 mb-1">
-            Your Local Appliance Service Center
+            {data.title}
           </h2>
-          <p className="text-lg text-slate-500 font-normal mb-3">For All Major Brands &amp; Models</p>
+          <p className="text-lg text-slate-500 font-normal mb-3">{data.subtitle}</p>
           <p className="text-sm text-slate-500 max-w-[600px] mx-auto">
-            It doesn&apos;t matter where or when you bought your appliance. Our authorized repair experts service nearly all major appliance models and manufacturers.
+            {data.description}
           </p>
         </div>
 
@@ -55,7 +72,7 @@ export default function BrandsFull() {
           {/* Right: brands grid */}
           <div className="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 order-1 lg:order-2">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-1">
-              {brands.map((brand) => (
+              {data.items.map((brand) => (
                 <div
                   key={brand}
                   className="flex items-center gap-2 py-2 text-[13px] text-slate-600 border-b border-slate-100 last:border-b-0"

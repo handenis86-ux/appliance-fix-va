@@ -18,6 +18,9 @@ import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import JsonLd from "@/components/JsonLd";
 import { localBusinessSchema, organizationSchema } from "@/lib/seo";
+import { getHome } from "@/lib/content";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title:
@@ -61,25 +64,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const home = await getHome();
   return (
     <>
       <JsonLd data={[localBusinessSchema, organizationSchema]} />
       <Header />
       <main className="flex-1">
-        <Hero />
-        <ValueStrip />
-        <Services />
+        <Hero data={home.hero} />
+        <ValueStrip items={home.trustStrip} />
+        <Services data={home.services} />
         <OrderForm />
         <RepairServices />
         <NeedRepairCta />
         <ProfessionalRepair />
         <FAQ />
-        <WhyChooseUs />
-        <Reviews />
-        <Stats />
-        <BrandsFull />
-        <TrustedName />
+        <WhyChooseUs data={home.whyChooseUs} />
+        <Reviews data={home.reviews} />
+        <Stats data={home.stats} />
+        <BrandsFull data={home.brands} />
+        <TrustedName data={home.trustedName} />
         <CtaBanner />
       </main>
       <Footer />
