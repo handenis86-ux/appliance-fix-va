@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getBlog, getHome, getSite, SERVICE_SLUGS } from "@/lib/content";
+import { getBlog, getHome, getSite, SERVICE_SLUGS, REDIS_ENABLED } from "@/lib/content";
+import SeedButton from "@/components/admin/SeedButton";
 
 export const dynamic = "force-dynamic";
 
@@ -77,6 +78,47 @@ export default async function AdminDashboardPage() {
             </div>
           </Link>
         ))}
+      </div>
+
+      <div className="bg-white border border-slate-200 rounded-xl p-5 mb-6">
+        <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-3">
+          Persistence status
+        </h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span
+            className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${
+              REDIS_ENABLED
+                ? "bg-green-100 text-green-800"
+                : "bg-amber-100 text-amber-800"
+            }`}
+          >
+            <span
+              className={`w-2 h-2 rounded-full ${
+                REDIS_ENABLED ? "bg-green-500" : "bg-amber-500"
+              }`}
+            />
+            {REDIS_ENABLED ? "Redis connected" : "Redis not configured"}
+          </span>
+        </div>
+        {REDIS_ENABLED ? (
+          <>
+            <p className="text-sm text-slate-600 mb-3">
+              Content is persisted to Upstash Redis. Save changes from any
+              admin page and they will be live immediately. Use the button
+              below to one-time seed Redis with the current JSON files.
+            </p>
+            <SeedButton />
+          </>
+        ) : (
+          <p className="text-sm text-slate-600">
+            Redis is not configured. Saves only persist to the local filesystem
+            (works in <code>npm run dev</code>). For production, set{" "}
+            <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded">KV_REST_API_URL</code>{" "}
+            and{" "}
+            <code className="text-xs bg-slate-100 px-1.5 py-0.5 rounded">KV_REST_API_TOKEN</code>{" "}
+            in Vercel and redeploy.
+          </p>
+        )}
       </div>
 
       <div className="bg-white border border-slate-200 rounded-xl p-5">

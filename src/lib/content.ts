@@ -1,10 +1,32 @@
-// This module uses Node fs APIs and must only be imported from Server
-// Components, Route Handlers, or Server Actions. Do not import from Client
-// Components. (We avoid `import "server-only"` since the package is not
-// listed as a direct dependency of this project.)
+// This module uses Node fs APIs + Upstash Redis and must only be imported
+// from Server Components, Route Handlers, or Server Actions. Do not import
+// from Client Components.
 
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { Redis } from "@upstash/redis";
+
+// ============================================================================
+// Redis client (Upstash) — used for production persistence on Vercel.
+// Falls back to JSON files if env vars are not set (for local dev).
+// ============================================================================
+
+const REDIS_URL = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+const REDIS_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+
+const redis: Redis | null =
+  REDIS_URL && REDIS_TOKEN
+    ? new Redis({ url: REDIS_URL, token: REDIS_TOKEN })
+    : null;
+
+export const REDIS_ENABLED = redis !== null;
+
+// Key prefix for all content keys, so they're namespaced and easy to inspect.
+const KEY_PREFIX = "content:";
+
+function key(name: string) {
+  return `${KEY_PREFIX}${name}`;
+}
 
 // ============================================================================
 // Types
@@ -241,22 +263,77 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 // Readers
 // ============================================================================
 
-async function readJson<T>(relativePath: string): Promise<T> {
+async function readJsonFile<T>(relativePath: string): Promise<T> {
   const filePath = path.join(CONTENT_DIR, relativePath);
   const raw = await readFile(filePath, "utf-8");
   return JSON.parse(raw) as T;
 }
 
+/**
+ * Read content. In production with Redis configured, reads from Redis.
+ * Falls back to JSON file on disk if Redis is not configured or the key
+ * is missing (e.g. before first seed).
+ */
+async function readContent<T>(name: string, filePath: string): Promise<T> {
+  if (redis) {
+    try {
+      const cached = await redis.get<T>(key(name));
+      if (cached) return cached;
+    } catch (err) {
+      console.error(`[content] Redis read failed for ${name}, falling back to file:`, err);
+    }
+  }
+  return readJsonFile<T>(filePath);
+}
+
+/**
+ * Write content to Redis (if configured) and to JSON file on disk
+ * (if filesystem is writable — works in dev, not on Vercel).
+ */
+export async function writeContent<T>(
+  name: string,
+  filePath: string,
+  data: T,
+): Promise<{ redis: boolean; file: boolean }> {
+  let redisOk = false;
+  let fileOk = false;
+
+  if (redis) {
+    try {
+      await redis.set(key(name), data);
+      redisOk = true;
+    } catch (err) {
+      console.error(`[content] Redis write failed for ${name}:`, err);
+    }
+  }
+
+  // Try to also write to disk (best-effort, ignored on read-only filesystems)
+  try {
+    const { writeFile, mkdir } = await import("node:fs/promises");
+    const fullPath = path.join(CONTENT_DIR, filePath);
+    await mkdir(path.dirname(fullPath), { recursive: true });
+    await writeFile(fullPath, JSON.stringify(data, null, 2) + "\n", "utf-8");
+    fileOk = true;
+  } catch (err) {
+    // Silently ignore on read-only filesystems
+    if (process.env.NODE_ENV !== "production") {
+      console.error(`[content] File write failed for ${filePath}:`, err);
+    }
+  }
+
+  return { redis: redisOk, file: fileOk };
+}
+
 export function getSite(): Promise<Site> {
-  return readJson<Site>("site.json");
+  return readContent<Site>("site", "site.json");
 }
 
 export function getHome(): Promise<Home> {
-  return readJson<Home>("home.json");
+  return readContent<Home>("home", "home.json");
 }
 
 export function getService(slug: string): Promise<Service> {
-  return readJson<Service>(`services/${slug}.json`);
+  return readContent<Service>(`service-${slug}`, `services/${slug}.json`);
 }
 
 export async function getAllServices(): Promise<Service[]> {
@@ -264,11 +341,11 @@ export async function getAllServices(): Promise<Service[]> {
 }
 
 export function getArlington(): Promise<Arlington> {
-  return readJson<Arlington>("arlington.json");
+  return readContent<Arlington>("arlington", "arlington.json");
 }
 
 export function getBlog(): Promise<Blog> {
-  return readJson<Blog>("blog.json");
+  return readContent<Blog>("blog", "blog.json");
 }
 
 // ============================================================================

@@ -1,34 +1,19 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
-import { writeFile, mkdir } from "node:fs/promises";
-import path from "node:path";
-import { CONTENT_FILE_MAP, CONTENT_DIR } from "@/lib/content";
+import { CONTENT_FILE_MAP, REDIS_ENABLED, writeContent } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
 
 /**
- * Persistence limitation:
- *
- *   This handler writes to the local filesystem (the `content/` folder at
- *   the project root). That works well for local development, but on a
- *   typical Vercel / serverless production deploy the filesystem is
- *   read-only and any changes would be lost on the next cold start.
- *
- *   For production, this route should be replaced with one of:
- *     1. A database (Vercel KV, Postgres, Supabase, etc.)
- *     2. A GitHub commit via Octokit to update the JSON files in the repo
- *        and trigger a Vercel redeploy
- *     3. A headless CMS (Sanity, Contentful, Payload, etc.)
- *
- *   Until then, the admin panel is usable locally and on any deploy that
- *   exposes a writable working directory.
+ * Save handler. Writes to Upstash Redis (if env vars are set) and best-effort
+ * to the local filesystem (works in dev). On Vercel production, only Redis
+ * is persisted because the filesystem is read-only.
  */
-
 export async function POST(
   request: Request,
   context: { params: Promise<{ type: string }> },
 ) {
-  // Auth guard — the cookie must be present
+  // Auth guard
   const cookieStore = await cookies();
   if (cookieStore.get("admin_auth")?.value !== "1") {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -60,23 +45,27 @@ export async function POST(
     );
   }
 
-  const absolutePath = path.join(CONTENT_DIR, relativePath);
+  // The Redis key is just the type identifier (e.g. "site", "service-oven")
+  const result = await writeContent(type, relativePath, body);
 
-  try {
-    await mkdir(path.dirname(absolutePath), { recursive: true });
-    await writeFile(absolutePath, JSON.stringify(body, null, 2) + "\n", "utf-8");
-  } catch (err) {
-    const message =
-      err instanceof Error ? err.message : "Unknown error writing file";
+  if (!result.redis && !result.file) {
     return NextResponse.json(
       {
         error:
-          "Failed to write content file. On production deploys the filesystem is read-only — see the comment in this route for persistence options.",
-        detail: message,
+          "Failed to persist content. Redis is not configured and the filesystem is read-only. Set KV_REST_API_URL and KV_REST_API_TOKEN env vars in Vercel.",
       },
       { status: 500 },
     );
   }
 
-  return NextResponse.json({ ok: true, type, path: relativePath });
+  return NextResponse.json({
+    ok: true,
+    type,
+    path: relativePath,
+    persistedTo: {
+      redis: result.redis,
+      file: result.file,
+    },
+    redisEnabled: REDIS_ENABLED,
+  });
 }
