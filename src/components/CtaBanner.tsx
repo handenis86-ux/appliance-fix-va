@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BookingButton from "./BookingButton";
 
 export default function CtaBanner() {
   return (
@@ -10,12 +10,9 @@ export default function CtaBanner() {
         <p className="text-white/55 text-[15px] mb-7">
           Call (838) 201-3789 for fast, reliable appliance repair in Arlington, VA. Same-day service available.
         </p>
-        <Link
-          href="#order"
-          className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
-        >
+        <BookingButton className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors">
           Book Repair Now
-        </Link>
+        </BookingButton>
       </div>
     </section>
   );

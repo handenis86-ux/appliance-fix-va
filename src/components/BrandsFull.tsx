@@ -32,10 +32,10 @@ export default function BrandsFull() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 45vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-navy/70 via-navy/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/20" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <p className="text-xs uppercase tracking-wider text-blue mb-1">Certified Experts</p>
-              <h3 className="text-xl font-bold mb-2">30+ Brands We Service</h3>
+              <p className="text-xs uppercase tracking-[.15em] text-white/90 font-semibold mb-1.5">Certified Experts</p>
+              <h3 className="text-xl font-bold mb-2 text-white">30+ Brands We Service</h3>
               <p className="text-[13px] text-white/80 mb-4 leading-relaxed">
                 Factory-trained technicians ready to fix your appliance today.
               </p>
