@@ -227,8 +227,8 @@ export default function ArlingtonPage() {
               </div>
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                 <Image
-                  src="/hero.jpg"
-                  alt="Aerial view of Arlington, Virginia"
+                  src="/arlington.jpg"
+                  alt="Aerial view of Crystal City, Arlington, Virginia"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
