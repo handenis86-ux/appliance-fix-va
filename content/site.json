@@ -1,0 +1,28 @@
+{
+  "businessName": "Appliance Fix VA",
+  "phone": "(838) 201-3789",
+  "phoneHref": "tel:+18382013789",
+  "email": "info@appliancefixva.com",
+  "address": "Arlington, VA",
+  "hours": "Open 24/7",
+  "tagline": "Professional appliance repair in Arlington, Virginia. Fast, honest, and affordable service you can trust.",
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "google": ""
+  },
+  "areasServed": [
+    "Arlington",
+    "Alexandria",
+    "Fairfax",
+    "Woodbridge",
+    "Washington D.C.",
+    "Crystal City",
+    "Fort Myer",
+    "Potomac Yard",
+    "Rosslyn",
+    "Ballston",
+    "Pentagon City",
+    "Clarendon"
+  ]
+}

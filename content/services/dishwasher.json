@@ -1,0 +1,86 @@
+{
+  "slug": "dishwasher",
+  "hero": {
+    "eyebrow": "Arlington, Virginia",
+    "title": "Dishwasher Repair in Arlington, Virginia",
+    "subtitle": "Call by 2pm for Same-Day Service or Fast, Priority Scheduling. Whether your dishwasher won't turn on, isn't cleaning or completely stopped working — our Arlington dishwasher repair experts provide quick fixes for any issue.",
+    "image": "/why-1.png",
+    "primaryCtaLabel": "I Need Service",
+    "primaryCtaHref": "/#order",
+    "secondaryCtaLabel": "Call Us 24/7 (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "whatWeFix": {
+    "eyebrow": "What We Fix",
+    "title": "Fast & Affordable In-Home Dishwasher Repair Services",
+    "subtitle": "Whether your dishwasher won't turn on, isn't cleaning or completely stopped working, our Arlington dishwasher repair experts can fix the issue quickly and affordably.",
+    "intro": "Stop hand-washing! From repairs and maintenance to faulty part replacement, our experienced technicians can help with any dishwasher problem, including:"
+  },
+  "problems": [
+    "Dishwasher Stopped Working",
+    "Dishwasher Not Cleaning",
+    "Doesn't Get Hot",
+    "Won't Fill",
+    "Leaking Water",
+    "Stops Mid Cycle",
+    "Not Drying",
+    "Doesn't Drain",
+    "Has No Power",
+    "Making Noises"
+  ],
+  "features": {
+    "eyebrow": "Why Choose Us",
+    "title": "Dishwasher Repair Done Right: Quality Service By Certified Experts",
+    "subtitle": "A broken dishwasher is a hassle. At Appliance Fix VA, we take pride in providing speedy and reliable appliance repairs at a fair price.",
+    "items": [
+      { "title": "Fast, On-Time Service", "description": "Scheduling your dishwasher repair should be simple! That's why we offer flexible appointment times, including same and next-day service." },
+      { "title": "Factory-Trained Technicians", "description": "Whatever the brand or model, Appliance Fix VA is your go-to authorized service center for any dishwasher repair in Arlington." },
+      { "title": "Same-Day Dishwasher Repairs", "description": "Our technicians arrive with fully stocked trucks, which means we can fix nearly any appliance issue in just a single visit — saving you stress, time and money." },
+      { "title": "Always Affordable Pricing", "description": "Forget about surprise charges or hidden fees. Before work begins, your repairman will explain what solutions are available so you know exactly what to expect." },
+      { "title": "In Your Neighborhood", "description": "With technicians throughout the state, Appliance Fix VA is your best option for quick service, no matter where you're located." }
+    ]
+  },
+  "types": [
+    "Built-In Dishwasher Repair",
+    "Portable Dishwasher Repair",
+    "Countertop Dishwasher Repair",
+    "Integrated Dishwasher Repair",
+    "Standard Dishwasher Repair",
+    "Compact Dishwasher Repair"
+  ],
+  "parts": [],
+  "brandsSection": {
+    "title": "Your Local Dishwasher Service Center",
+    "subtitle": "For All Major Brands & Models",
+    "description": "It doesn't matter where or when you bought your dishwasher. Our authorized repair experts service nearly all major appliance models and manufacturers."
+  },
+  "brands": [
+    "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+    "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+    "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+    "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+    "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking"
+  ],
+  "faq": {
+    "title": "Dishwasher Repair – Frequently Asked Questions",
+    "items": [
+      { "q": "Why is my dishwasher not cleaning dishes properly?", "a": "If your dishwasher is leaving dishes dirty, greasy, or with residue, the issue is usually related to clogged spray arms, a dirty filter, low water pressure, or incorrect detergent use. Regular cleaning and proper loading can help, but persistent issues may require professional repair." },
+      { "q": "Why is my dishwasher not draining water?", "a": "Standing water at the bottom of your dishwasher is often caused by a clogged drain hose, blocked filter, or a faulty drain pump. In some cases, the issue may be connected to the garbage disposal. Address quickly to prevent odors and damage." },
+      { "q": "Why is my dishwasher making loud or strange noises?", "a": "Grinding, buzzing, or rattling sounds typically indicate something is stuck inside (like glass or debris), or there may be a worn-out motor or pump. Ignoring unusual noises can lead to more serious damage." },
+      { "q": "Why won't my dishwasher start?", "a": "If your dishwasher is not turning on, the problem could be a faulty door latch, power supply issue, or a malfunctioning control board. Electrical issues should be diagnosed by a professional technician." },
+      { "q": "Why is my dishwasher leaking water?", "a": "Leaks are commonly caused by a worn door gasket, loose or damaged hoses, or using too much detergent. Water leaks can damage your floors, so it's important to fix this issue as soon as possible." },
+      { "q": "Why are my dishes still wet after the cycle?", "a": "If your dishwasher is not drying dishes properly, it may have a faulty heating element or may be missing rinse aid. Plastic items also tend to stay wet due to their material properties." },
+      { "q": "Why does my dishwasher smell bad?", "a": "Unpleasant odors are usually caused by food buildup in the filter or drain, mold growth, or lack of regular cleaning. Routine maintenance can help prevent bad smells." },
+      { "q": "Why is my dishwasher cycle taking too long?", "a": "Long cycles can be caused by sensor issues, heating problems, or energy-efficient eco settings. If your dishwasher suddenly starts running much longer than usual, it may need inspection." }
+    ]
+  },
+  "trustedName": {
+    "title": "The Trusted Name For Dishwasher Repair in Arlington",
+    "intro": "Looking for help getting the most out of your home appliances? From the kitchen to the laundry room, Appliance Fix VA is your one-stop shop for all of your appliance repair needs. Here's how it works:",
+    "steps": [
+      { "title": "Schedule Your Dishwasher Repair:", "description": "Call our 24/7 phone line, let us know about your dishwasher problem and we'll find a technician to help you as soon as possible." },
+      { "title": "Your Dishwasher Gets Fixed:", "description": "Once your technician arrives, they will diagnose the problem and explain what work needs to be done. If you decide to proceed, your technician will have your dishwasher fixed before you know it." }
+    ],
+    "outro": "Discover the Appliance Fix VA difference today! All you have to do is pick up the phone and call (838) 201-3789. Let us do the rest."
+  }
+}

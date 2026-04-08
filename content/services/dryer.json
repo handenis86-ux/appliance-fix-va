@@ -1,0 +1,79 @@
+{
+  "slug": "dryer",
+  "hero": {
+    "eyebrow": "Arlington, Virginia",
+    "title": "Dryer Repair in Arlington, Virginia",
+    "subtitle": "Call by 2pm for Same-Day Service or Fast, Priority Scheduling. Whether your dryer won't heat up, isn't spinning or completely stopped working — our Arlington dryer repair experts provide quick fixes for any issue.",
+    "image": "/why-1.png",
+    "primaryCtaLabel": "I Need Service",
+    "primaryCtaHref": "/#order",
+    "secondaryCtaLabel": "Call Us 24/7 (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "whatWeFix": {
+    "eyebrow": "What We Fix",
+    "title": "Fast & Affordable In-Home Dryer Repair Services",
+    "subtitle": "Whether your dryer won't heat, takes too long to dry or has completely stopped working, our Arlington dryer repair experts can fix the issue quickly and affordably.",
+    "intro": "Don't pile up wet laundry! From repairs and maintenance to faulty part replacement, our experienced technicians can help with any dryer problem, including:"
+  },
+  "problems": [
+    "Dryer Not Heating / Blowing Cold Air",
+    "Taking Too Long to Dry",
+    "Loud Noises (Squeaking, Grinding, Thumping)",
+    "Won't Start / No Lights",
+    "Stopping Mid-Cycle",
+    "Overheating / Burning Smell",
+    "Drum Not Spinning",
+    "Door Won't Close Properly",
+    "Light Stays On",
+    "Clothes Stay Wet After Cycle"
+  ],
+  "features": {
+    "eyebrow": "Why Choose Us",
+    "title": "Dryer Repair Done Right: Quality Service By Certified Experts",
+    "subtitle": "A broken dryer can disrupt your whole week. At Appliance Fix VA, we take pride in providing speedy and reliable appliance repairs at a fair price.",
+    "items": [
+      { "title": "Fast, On-Time Service", "description": "Scheduling your dryer repair should be simple! That's why we offer flexible appointment times, including same and next-day service." },
+      { "title": "Factory-Trained Technicians", "description": "Whatever the brand or model, Appliance Fix VA is your go-to authorized service center for any dryer repair in Arlington." },
+      { "title": "Same-Day Dryer Repairs", "description": "Our technicians arrive with fully stocked trucks, which means we can fix nearly any appliance issue in just a single visit — saving you stress, time and money." },
+      { "title": "Always Affordable Pricing", "description": "Forget about surprise charges or hidden fees. Before work begins, your repairman will explain what solutions are available so you know exactly what to expect." },
+      { "title": "In Your Neighborhood", "description": "With technicians throughout the state, Appliance Fix VA is your best option for quick service, no matter where you're located." }
+    ]
+  },
+  "types": [],
+  "parts": [],
+  "brandsSection": {
+    "title": "Your Local Dryer Service Center",
+    "subtitle": "For All Major Brands & Models",
+    "description": "It doesn't matter where or when you bought your dryer. Our authorized repair experts service nearly all major appliance models and manufacturers."
+  },
+  "brands": [
+    "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+    "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+    "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+    "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+    "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking"
+  ],
+  "faq": {
+    "title": "Dryer Repair – Frequently Asked Questions",
+    "items": [
+      { "q": "Dryer Not Heating / Blowing Cold Air", "a": "Dryer not heating or blowing cold air is a common problem where clothes stay wet after a full cycle, usually caused by a burned-out heating element, blown thermal fuse, faulty thermostat, or gas supply issue in gas dryers." },
+      { "q": "Dryer Taking Too Long to Dry Clothes", "a": "Often means poor airflow due to a clogged dryer vent, dirty lint filter, or crushed exhaust hose, which reduces efficiency and can increase fire risk." },
+      { "q": "Dryer Making Loud Noises", "a": "Squeaking, grinding, or thumping noises typically indicate worn drum rollers, a damaged belt, loose bearings, or a failing motor that requires repair." },
+      { "q": "Dryer Won't Start or Turn On", "a": "With no lights or response, often caused by power supply issues, a faulty door switch, broken start switch, or a defective control board." },
+      { "q": "Dryer Stopping Mid-Cycle", "a": "Usually happens when overheating from blocked airflow, a defective thermal fuse, or a motor that is overheating and failing." },
+      { "q": "Dryer Overheating or Burning Smell", "a": "A serious issue often caused by lint buildup, blocked vents, or a faulty thermostat, and requires immediate attention to prevent fire hazards." },
+      { "q": "Dryer Drum Not Spinning", "a": "While the motor is running, this is commonly due to a broken drive belt, worn idler pulley, or internal motor issues affecting drum rotation." },
+      { "q": "Dryer Door Not Closing Properly", "a": "Or dryer light staying on can prevent the machine from starting and is usually caused by a faulty door switch, broken latch, or worn door seal." }
+    ]
+  },
+  "trustedName": {
+    "title": "The Trusted Name For Dryer Repair in Arlington",
+    "intro": "Looking for help getting the most out of your home appliances? From the kitchen to the laundry room, Appliance Fix VA is your one-stop shop for all of your appliance repair needs. Here's how it works:",
+    "steps": [
+      { "title": "Schedule Your Dryer Repair:", "description": "Call our 24/7 phone line, let us know about your dryer problem and we'll find a technician to help you as soon as possible." },
+      { "title": "Your Dryer Gets Fixed:", "description": "Once your technician arrives, they will diagnose the problem and explain what work needs to be done. If you decide to proceed, your technician will have your dryer fixed before you know it." }
+    ],
+    "outro": "Discover the Appliance Fix VA difference today! All you have to do is pick up the phone and call (838) 201-3789. Let us do the rest."
+  }
+}

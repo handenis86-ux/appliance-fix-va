@@ -5,18 +5,90 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Washer Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Washer Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional washing machine repair in Arlington, Virginia. Front-load, top-load, all brands — same-day service. Call (838) 201-3789 for a free estimate.",
+    "Same-day washing machine repair in Arlington, VA. Front-load, top-load, all brands. Call (838) 201-3789 for a free estimate today.",
+  keywords: [
+    "washer repair Arlington VA",
+    "washing machine repair Arlington Virginia",
+    "front load washer repair Arlington",
+    "top load washer repair Arlington",
+    "washer not spinning Arlington",
+    "washer leaking water repair",
+  ],
+  alternates: {
+    canonical: "/washer-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/washer-repair",
     title: "Washer Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional washing machine repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day washing machine repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/why-3.png",
+        width: 1200,
+        height: 630,
+        alt: "Washing machine repair in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Washer Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day washing machine repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/why-3.png"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Washer Won't Start",
+    a: "A washing machine that won't start is often caused by power supply issues such as a tripped circuit breaker, unplugged cord, or faulty outlet, as well as a defective lid switch, door lock, control board, or timer. Make sure the washer is plugged in, the breaker is on, and the door or lid is fully closed.",
+  },
+  {
+    q: "Washer Not Filling with Water",
+    a: "If your washer is not filling with water, the issue is commonly related to a turned-off water supply, clogged inlet valve or filter, or kinked or blocked water hoses. Check that both hot and cold water valves are open and inspect hoses for damage.",
+  },
+  {
+    q: "Washer Not Spinning",
+    a: "When a washing machine is not spinning and clothes come out soaking wet, the problem is typically a broken drive belt, faulty motor or motor coupling, or a malfunctioning lid switch.",
+  },
+  {
+    q: "Washer Not Draining",
+    a: "A washer that does not drain water usually has a clogged drain hose or pump, debris such as coins or lint blocking the system, or a failed drain pump.",
+  },
+  {
+    q: "Washer Making Loud Noise or Vibrating",
+    a: "Excessive noise or vibration during operation is often caused by an unbalanced load, worn-out bearings or suspension components, or an unlevel washing machine.",
+  },
+  {
+    q: "Washer Leaking Water",
+    a: "Water leaking from a washing machine may be due to damaged or loose hoses, a worn door seal in front-load washers, or faulty internal connections. Address quickly to prevent damage.",
+  },
+  {
+    q: "Washer Stops Mid-Cycle",
+    a: "If your washer stops in the middle of a cycle, it may be triggered by overload protection, a faulty control board, or timer malfunction.",
+  },
+  {
+    q: "Washer Has Bad Smell or Mold",
+    a: "Usually caused by detergent buildup, moisture retention, and poor ventilation, especially in front-load washers. Leaving the door open after use and regular cleaning can help.",
+  },
+  {
+    q: "Washer Not Agitating",
+    a: "When a washer does not agitate, the cause is often worn agitator components, motor problems, or transmission issues affecting drum movement.",
+  },
+  {
+    q: "Washer Showing Error Codes",
+    a: "Modern washing machines display error codes for sensor failures, door lock problems, or water supply errors, indicating that diagnostic or professional repair may be required.",
+  },
+];
 
 const problems = [
   "Washer Won't Start",
@@ -80,6 +152,18 @@ const features = [
 export default function WasherRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Washing Machine Repair",
+            name: "Washer Repair in Arlington, VA",
+            description:
+              "Same-day washing machine repair in Arlington, Virginia. Certified technicians fix front-load, top-load washers, drainage, spin cycle and leaks for all brands.",
+            path: "/washer-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -110,7 +194,7 @@ export default function WasherRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/why-3.png"
-              alt="Washing machine repair in Arlington"
+              alt="Washing machine repair technician in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -259,48 +343,7 @@ export default function WasherRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Washing Machine – Frequently Asked Questions"
-          items={[
-            {
-              q: "Washer Won't Start",
-              a: "A washing machine that won't start is often caused by power supply issues such as a tripped circuit breaker, unplugged cord, or faulty outlet, as well as a defective lid switch, door lock, control board, or timer. Make sure the washer is plugged in, the breaker is on, and the door or lid is fully closed.",
-            },
-            {
-              q: "Washer Not Filling with Water",
-              a: "If your washer is not filling with water, the issue is commonly related to a turned-off water supply, clogged inlet valve or filter, or kinked or blocked water hoses. Check that both hot and cold water valves are open and inspect hoses for damage.",
-            },
-            {
-              q: "Washer Not Spinning",
-              a: "When a washing machine is not spinning and clothes come out soaking wet, the problem is typically a broken drive belt, faulty motor or motor coupling, or a malfunctioning lid switch.",
-            },
-            {
-              q: "Washer Not Draining",
-              a: "A washer that does not drain water usually has a clogged drain hose or pump, debris such as coins or lint blocking the system, or a failed drain pump.",
-            },
-            {
-              q: "Washer Making Loud Noise or Vibrating",
-              a: "Excessive noise or vibration during operation is often caused by an unbalanced load, worn-out bearings or suspension components, or an unlevel washing machine.",
-            },
-            {
-              q: "Washer Leaking Water",
-              a: "Water leaking from a washing machine may be due to damaged or loose hoses, a worn door seal in front-load washers, or faulty internal connections. Address quickly to prevent damage.",
-            },
-            {
-              q: "Washer Stops Mid-Cycle",
-              a: "If your washer stops in the middle of a cycle, it may be triggered by overload protection, a faulty control board, or timer malfunction.",
-            },
-            {
-              q: "Washer Has Bad Smell or Mold",
-              a: "Usually caused by detergent buildup, moisture retention, and poor ventilation, especially in front-load washers. Leaving the door open after use and regular cleaning can help.",
-            },
-            {
-              q: "Washer Not Agitating",
-              a: "When a washer does not agitate, the cause is often worn agitator components, motor problems, or transmission issues affecting drum movement.",
-            },
-            {
-              q: "Washer Showing Error Codes",
-              a: "Modern washing machines display error codes for sensor failures, door lock problems, or water supply errors, indicating that diagnostic or professional repair may be required.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}

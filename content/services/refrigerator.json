@@ -1,0 +1,79 @@
+{
+  "slug": "refrigerator",
+  "hero": {
+    "eyebrow": "Arlington, Virginia",
+    "title": "Refrigerator Repair in Arlington, Virginia",
+    "subtitle": "Call by 1pm for Same-Day Service or Fast, Priority Scheduling. Whether your refrigerator won't get cold, isn't making ice or completely stopped working — our certified experts solve any problem.",
+    "image": "/why-2.png",
+    "primaryCtaLabel": "I Need Service",
+    "primaryCtaHref": "/#order",
+    "secondaryCtaLabel": "Call Us 24/7 (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "whatWeFix": {
+    "eyebrow": "What We Fix",
+    "title": "Fast & Affordable In-Home Refrigerator Repair Services",
+    "subtitle": "Is your refrigerator acting up? Whether it won't cool, is leaking water or has stopped working entirely, our Arlington refrigerator repair experts can diagnose and fix the issue — quickly and affordably.",
+    "intro": "Don't risk spoiled food or rising energy bills! From repairs and maintenance to faulty part replacement, our experienced technicians can help with any fridge problem, including:"
+  },
+  "problems": [
+    "Refrigerator Won't Get Cold",
+    "Refrigerator Not Making Ice",
+    "Freezer Full of Ice / Frost",
+    "Fridge Leaking Water",
+    "Strange Noises (Buzzing, Clicking)",
+    "Water Dispenser Not Working",
+    "Compressor Issues",
+    "Door Seal Not Sealing",
+    "Temperature Fluctuations",
+    "Fridge Completely Stopped Working"
+  ],
+  "features": {
+    "eyebrow": "Why Choose Us",
+    "title": "Refrigerator Repair Done Right: Quality Service By Certified Experts",
+    "subtitle": "A broken refrigerator can significantly disrupt your daily life — and put your groceries at risk. At Appliance Fix VA, we understand how inconvenient this can be. That's why we take pride in providing speedy and reliable appliance repairs at a fair price.",
+    "items": [
+      { "title": "Fast, On-Time Service", "description": "Scheduling your refrigerator repair should be simple! That's why we offer flexible appointment times, including same and next-day service." },
+      { "title": "Factory-Trained Technicians", "description": "Whatever the brand or model, Appliance Fix VA is your go-to authorized service center for any refrigerator repair in Arlington." },
+      { "title": "Same-Day Refrigerator Repairs", "description": "Our technicians arrive with fully stocked trucks, which means we can fix nearly any fridge issue in just a single visit — saving you stress, time and money." },
+      { "title": "Always Affordable Pricing", "description": "Forget about surprise charges or hidden fees. Before work begins, your repairman will explain what solutions are available so you know exactly what to expect." },
+      { "title": "In Your Neighborhood", "description": "With technicians throughout the state, Appliance Fix VA is your best option for quick service, no matter where you're located." }
+    ]
+  },
+  "types": [],
+  "parts": [],
+  "brandsSection": {
+    "title": "Your Local Refrigerator Service Center",
+    "subtitle": "For All Major Brands & Models",
+    "description": "It doesn't matter where or when you bought your refrigerator. Our authorized repair experts service nearly all major appliance models and manufacturers."
+  },
+  "brands": [
+    "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+    "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+    "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+    "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+    "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking"
+  ],
+  "faq": {
+    "title": "Refrigerator Repair – Frequently Asked Questions",
+    "items": [
+      { "q": "Why is my refrigerator not cooling?", "a": "Most often due to dirty coils, airflow issues or a faulty fan, defrost system issue. Book cooling repair to fix the malfunction." },
+      { "q": "Why is my freezer full of ice?", "a": "This usually means your defrost system isn't working. It can block airflow and stop cooling. Possible causes — door seal leak, thermostat issues. This often leads to full cooling failure if ignored." },
+      { "q": "Why is my fridge leaking water?", "a": "Water inside or under your fridge. Typically caused by a clogged drain or water line issue. Book repair to stop the leak." },
+      { "q": "Why is my refrigerator making noise?", "a": "The fridge is buzzing, clicking or rattling sounds. Possible causes are compressor issues, fan problems, or start relay failure. Early diagnosis prevents expensive damage." },
+      { "q": "Ice maker not working — can you fix it?", "a": "No ice or slow production. Possible causes — frozen waterline, valve issues, ice maker failure. Often repairable without full replacement." },
+      { "q": "Fridge not turning on at all", "a": "Your fridge is completely off. Possible causes — power issue, control board failure, compressor problem. We check simple fixes first to save you money." },
+      { "q": "Is it worth repairing a refrigerator?", "a": "Yes, especially if it's under 10 years old and repair cost is less than replacement." },
+      { "q": "How fast can you fix it?", "a": "Most repairs are completed the same day or within 24-48 hours if parts are needed." }
+    ]
+  },
+  "trustedName": {
+    "title": "The Trusted Name For Refrigerator Repair in Arlington",
+    "intro": "Looking for help getting the most out of your home appliances? From the kitchen to the laundry room, Appliance Fix VA is your one-stop shop for all of your appliance repair needs. Here's how it works:",
+    "steps": [
+      { "title": "Schedule Your Refrigerator Repair:", "description": "Call our 24/7 phone line, let us know about your refrigerator problem and we'll find a technician to help you as soon as possible." },
+      { "title": "Your Fridge Gets Fixed:", "description": "Once your technician arrives, they will diagnose the problem and explain what work needs to be done. If you decide to proceed, your technician will have your refrigerator fixed before you know it." }
+    ],
+    "outro": "Discover the Appliance Fix VA difference today! All you have to do is pick up the phone and call (838) 201-3789. Let us do the rest."
+  }
+}

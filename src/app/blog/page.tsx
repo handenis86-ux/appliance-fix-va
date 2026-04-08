@@ -1,11 +1,46 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Blog & Resources | Appliance Fix VA",
+export const metadata: Metadata = {
+  title: "Appliance Repair Blog & Resources | Arlington, VA",
   description:
-    "Browse expert articles by appliance category — refrigerators, ovens, washers, dryers, dishwashers and more. Tips and guides from Appliance Fix VA in Arlington, Virginia.",
+    "Expert appliance repair tips and guides for Arlington, VA homeowners. Fridge, oven, washer, dryer, dishwasher articles. Call (838) 201-3789 for service.",
+  keywords: [
+    "appliance repair blog Arlington VA",
+    "appliance repair tips Arlington",
+    "refrigerator troubleshooting",
+    "washer repair guide",
+    "dryer maintenance tips",
+    "oven repair guide",
+    "dishwasher tips",
+  ],
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    type: "website",
+    url: "/blog",
+    title: "Appliance Repair Blog & Resources | Appliance Fix VA",
+    description:
+      "Expert appliance repair tips and guides from Appliance Fix VA in Arlington, Virginia.",
+    images: [
+      {
+        url: "/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Appliance Fix VA blog and resources",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Appliance Repair Blog & Resources | Appliance Fix VA",
+    description:
+      "Expert appliance repair tips and guides for Arlington, VA homeowners.",
+    images: ["/hero.jpg"],
+  },
 };
 
 const categories = [

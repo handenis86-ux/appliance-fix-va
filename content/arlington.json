@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "eyebrow": "Service Area",
+    "title": "Appliance Repair in Arlington, VA",
+    "subtitle": "Trusted local appliance repair serving Arlington and surrounding areas. Fast, reliable same-day service from certified technicians you can count on.",
+    "primaryCtaLabel": "Book Repair",
+    "primaryCtaHref": "/#order",
+    "secondaryCtaLabel": "Call (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "servicesSection": {
+    "title": "Appliance Repair Services in Arlington",
+    "subtitle": "We fix all major household appliances in Arlington, VA and the surrounding neighborhoods.",
+    "items": [
+      { "title": "Refrigerator Repair", "description": "Fast fixes for cooling issues, leaks and noisy compressors. Same-day service available.", "href": "/refrigerator-repair" },
+      { "title": "Washer Repair", "description": "Expert diagnostics for leaks, draining problems and spin cycle failures on all major brands.", "href": "/washer-repair" },
+      { "title": "Dryer Repair", "description": "No heat or tumbling issues? We restore your dryer's performance quickly and safely.", "href": "/dryer-repair" },
+      { "title": "Oven & Stove Repair", "description": "Reliable repair for gas and electric ovens. We fix heating elements and control boards.", "href": "/oven-repair" },
+      { "title": "Dishwasher Repair", "description": "Stop hand washing. We resolve drainage issues, water leaks and power failures.", "href": "/dishwasher-repair" }
+    ]
+  },
+  "areasSection": {
+    "title": "Serving Arlington & Nearby Areas",
+    "description": "Our certified technicians provide fast, affordable appliance repair across Arlington and all nearby communities. No matter where you are in the area, we bring expert service right to your door.",
+    "image": "/hero.jpg",
+    "areas": [
+      "Arlington",
+      "Crystal City",
+      "Fort Myer",
+      "Potomac Yard",
+      "Rosslyn",
+      "Ballston",
+      "Pentagon City",
+      "Clarendon"
+    ]
+  },
+  "trustStats": {
+    "title": "Why Arlington Residents Trust Us",
+    "items": [
+      { "value": "500+", "label": "Happy Customers" },
+      { "value": "4.9★", "label": "Average Rating" },
+      { "value": "24/7", "label": "Support Available" },
+      { "value": "90%", "label": "Same-Day Completion" }
+    ]
+  },
+  "ctaBanner": {
+    "title": "Need Appliance Repair in Arlington?",
+    "subtitle": "Our certified technicians are ready to help. Same-day appointments available for most appliance repairs in the Arlington area.",
+    "primaryCtaLabel": "Call (838) 201-3789",
+    "primaryCtaHref": "tel:+18382013789",
+    "secondaryCtaLabel": "Book Online",
+    "secondaryCtaHref": "/#order"
+  }
+}

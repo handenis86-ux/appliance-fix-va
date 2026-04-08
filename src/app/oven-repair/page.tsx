@@ -5,18 +5,83 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Oven & Stove Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Oven & Stove Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional oven and stove repair in Arlington, Virginia. Gas, electric, convection ovens — same-day service, all brands. Call (838) 201-3789 for a free estimate.",
+    "Same-day oven and stove repair in Arlington, VA. Gas, electric, convection, wall ovens. All brands. Call (838) 201-3789 for a free estimate.",
+  keywords: [
+    "oven repair Arlington VA",
+    "stove repair Arlington Virginia",
+    "gas oven repair Arlington",
+    "electric oven repair Arlington",
+    "wall oven repair Arlington",
+    "cooktop repair Arlington",
+    "range repair Arlington",
+  ],
+  alternates: {
+    canonical: "/oven-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/oven-repair",
     title: "Oven & Stove Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional oven repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day oven and stove repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/oven-hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Oven and stove repair service in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oven & Stove Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day oven and stove repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/oven-hero.jpeg"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Oven Not Heating Properly",
+    a: "If your food takes too long to cook or stays undercooked, the issue is often a burned-out heating element (electric ovens), a faulty igniter (gas ovens), or a defective thermostat or temperature sensor. Don't wait — this problem usually gets worse over time.",
+  },
+  {
+    q: "Stove Burners Not Working",
+    a: "If a burner won't turn on or heats unevenly, possible causes include a damaged burner coil or element, clogged gas ports, or a faulty ignition switch or spark module. Tip: Uneven heat can ruin cookware and food quality.",
+  },
+  {
+    q: "Oven Not Turning On",
+    a: "If your oven is completely unresponsive, common causes include a tripped circuit breaker, a faulty control board, or wiring/power supply issues. Quick fix: Check your breaker first — if that's not it, you likely need service.",
+  },
+  {
+    q: "Oven Temperature Is Inaccurate",
+    a: "If your food burns or remains undercooked, this may be due to a faulty temperature sensor, calibration issues, or a failing thermostat. Warning: This can lead to consistently wasted food.",
+  },
+  {
+    q: "Gas Smell or Ignition Problems",
+    a: "If you notice a gas smell or delayed ignition, causes may include a weak or dirty igniter, gas valve issues, or blocked burner ports. Safety Alert: This is dangerous — call for service immediately.",
+  },
+  {
+    q: "Control Panel or Knobs Not Responding",
+    a: "If you can't adjust temperature or turn on your cooktop, the issue may be worn knobs, a failed control board, or moisture/grease damage. Common in older units or after spills.",
+  },
+  {
+    q: "Self-Cleaning Function Not Working",
+    a: "If your oven won't lock, unlock, or start cleaning, it may be due to a faulty door latch, control board issues, or overheating protection. Important: Avoid forcing the door — it can cause more damage.",
+  },
+  {
+    q: "Oven Door Won't Close Properly",
+    a: "If heat escapes or cooking is uneven, common causes include a worn-out door seal, broken hinges, or a misaligned door. This increases energy bills and cooking time.",
+  },
+];
 
 const problems = [
   "Oven doesn't turn on",
@@ -100,6 +165,18 @@ const features = [
 export default function OvenRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Oven and Stove Repair",
+            name: "Oven & Stove Repair in Arlington, VA",
+            description:
+              "Same-day oven, stove, range and cooktop repair in Arlington, Virginia. Certified technicians service gas, electric and convection ovens from all major brands.",
+            path: "/oven-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -130,7 +207,7 @@ export default function OvenRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/oven-hero.jpeg"
-              alt="Viking ovens and ranges"
+              alt="Viking oven and range repair in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -336,40 +413,7 @@ export default function OvenRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Oven & Stove Repair – Frequently Asked Questions"
-          items={[
-            {
-              q: "Oven Not Heating Properly",
-              a: "If your food takes too long to cook or stays undercooked, the issue is often a burned-out heating element (electric ovens), a faulty igniter (gas ovens), or a defective thermostat or temperature sensor. Don't wait — this problem usually gets worse over time.",
-            },
-            {
-              q: "Stove Burners Not Working",
-              a: "If a burner won't turn on or heats unevenly, possible causes include a damaged burner coil or element, clogged gas ports, or a faulty ignition switch or spark module. Tip: Uneven heat can ruin cookware and food quality.",
-            },
-            {
-              q: "Oven Not Turning On",
-              a: "If your oven is completely unresponsive, common causes include a tripped circuit breaker, a faulty control board, or wiring/power supply issues. Quick fix: Check your breaker first — if that's not it, you likely need service.",
-            },
-            {
-              q: "Oven Temperature Is Inaccurate",
-              a: "If your food burns or remains undercooked, this may be due to a faulty temperature sensor, calibration issues, or a failing thermostat. Warning: This can lead to consistently wasted food.",
-            },
-            {
-              q: "Gas Smell or Ignition Problems",
-              a: "If you notice a gas smell or delayed ignition, causes may include a weak or dirty igniter, gas valve issues, or blocked burner ports. Safety Alert: This is dangerous — call for service immediately.",
-            },
-            {
-              q: "Control Panel or Knobs Not Responding",
-              a: "If you can't adjust temperature or turn on your cooktop, the issue may be worn knobs, a failed control board, or moisture/grease damage. Common in older units or after spills.",
-            },
-            {
-              q: "Self-Cleaning Function Not Working",
-              a: "If your oven won't lock, unlock, or start cleaning, it may be due to a faulty door latch, control board issues, or overheating protection. Important: Avoid forcing the door — it can cause more damage.",
-            },
-            {
-              q: "Oven Door Won't Close Properly",
-              a: "If heat escapes or cooking is uneven, common causes include a worn-out door seal, broken hinges, or a misaligned door. This increases energy bills and cooking time.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}

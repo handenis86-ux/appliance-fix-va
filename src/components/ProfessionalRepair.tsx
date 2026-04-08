@@ -9,7 +9,7 @@ export default function ProfessionalRepair() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 border border-slate-200 rounded-[10px] overflow-hidden">
           <div className="p-7 md:border-r md:border-slate-200">
-            <h4 className="text-base font-bold text-slate-900 mb-2.5">Technical Precision</h4>
+            <h3 className="text-base font-bold text-slate-900 mb-2.5">Technical Precision</h3>
             <p className="text-[13px] text-slate-500 leading-[1.7]">
               Our team handles intricate technical challenges from circuit board failures to mechanical issues. We identify the root cause accurately ensuring a reliable, long-term fix for your appliances.
             </p>
@@ -23,7 +23,7 @@ export default function ProfessionalRepair() {
             </ul>
           </div>
           <div className="p-7 border-t md:border-t-0 md:border-r border-slate-200">
-            <h4 className="text-base font-bold text-slate-900 mb-2.5">Factory Performance</h4>
+            <h3 className="text-base font-bold text-slate-900 mb-2.5">Factory Performance</h3>
             <p className="text-[13px] text-slate-500 leading-[1.7]">
               We restore your appliances to factory-grade efficiency by using professional expertise and specialised equipment, ensuring your home systems run perfectly again.
             </p>
@@ -37,7 +37,7 @@ export default function ProfessionalRepair() {
             </ul>
           </div>
           <div className="p-7 border-t md:border-t-0">
-            <h4 className="text-base font-bold text-slate-900 mb-2.5">Local Reliability</h4>
+            <h3 className="text-base font-bold text-slate-900 mb-2.5">Local Reliability</h3>
             <p className="text-[13px] text-slate-500 leading-[1.7]">
               Providing reliable support for home owners in Arlington, Alexandria and Fairfax. We focus on long-term reliability and same day service to restore your comfort without delay.
             </p>

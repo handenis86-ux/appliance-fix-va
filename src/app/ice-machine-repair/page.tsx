@@ -5,18 +5,82 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Ice Machine Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Ice Machine Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional ice machine repair in Arlington, Virginia. Built-in, free-standing, commercial and residential ice makers — same-day service. Call (838) 201-3789.",
+    "Same-day ice machine and ice maker repair in Arlington, VA. Residential and commercial, all brands. Call (838) 201-3789 for a free estimate.",
+  keywords: [
+    "ice machine repair Arlington VA",
+    "ice maker repair Arlington Virginia",
+    "commercial ice machine repair Arlington",
+    "Scotsman ice machine repair",
+    "Sub-Zero ice maker repair Arlington",
+    "under counter ice maker repair",
+  ],
+  alternates: {
+    canonical: "/ice-machine-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/ice-machine-repair",
     title: "Ice Machine Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional ice machine repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day ice machine repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/why-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Ice machine repair service in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ice Machine Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day ice machine repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/why-2.png"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Why is my ice machine not making ice?",
+    a: "The most common causes are a clogged water line, a faulty water inlet valve, low water pressure, or a defective control module. Sometimes the issue is as simple as a frozen line that needs thawing. Our technicians can quickly diagnose and fix the underlying problem.",
+  },
+  {
+    q: "Why is my ice machine producing ice slowly?",
+    a: "Slow ice production is often caused by dirty condenser coils, a clogged water filter, or low refrigerant levels. Regular cleaning and filter replacement can help, but persistent issues usually require professional service to restore normal output.",
+  },
+  {
+    q: "Why does my ice taste or smell bad?",
+    a: "Bad-tasting ice is typically caused by a dirty water filter, mineral buildup, mold growth, or absorbed odors from the freezer. Replacing the filter and a deep cleaning of the ice maker usually solves the problem.",
+  },
+  {
+    q: "Why is my ice machine leaking water?",
+    a: "Leaks are commonly caused by a clogged drain line, a damaged water supply line, a cracked ice mold, or a faulty water inlet valve. Address leaks quickly to prevent damage to your floors and surrounding cabinets.",
+  },
+  {
+    q: "Why are my ice cubes too small or hollow?",
+    a: "Small or hollow cubes usually indicate low water pressure, a clogged inlet valve, or a malfunctioning thermostat. The ice maker isn't getting enough water during the freeze cycle to form full cubes.",
+  },
+  {
+    q: "Why won't my ice machine turn on?",
+    a: "Check the power supply, circuit breaker, and on/off switch first. If those are working, the issue may be a faulty control board, thermostat, or wiring problem that needs professional diagnosis.",
+  },
+  {
+    q: "Why does my ice machine make strange noises?",
+    a: "Buzzing, grinding or rattling noises can indicate problems with the water pump, fan motor, compressor, or auger. Unusual sounds shouldn't be ignored — early diagnosis prevents costly repairs.",
+  },
+  {
+    q: "How often should I clean my ice machine?",
+    a: "We recommend a deep cleaning every 3-6 months for residential machines and monthly for commercial units. Regular maintenance prevents mineral buildup, mold, and many of the common problems above.",
+  },
+];
 
 const problems = [
   "Ice machine not making ice",
@@ -97,6 +161,18 @@ const features = [
 export default function IceMachineRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Ice Machine Repair",
+            name: "Ice Machine Repair in Arlington, VA",
+            description:
+              "Same-day ice machine and ice maker repair in Arlington, Virginia. Certified technicians service residential and commercial units for all major brands.",
+            path: "/ice-machine-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -127,7 +203,7 @@ export default function IceMachineRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/why-2.png"
-              alt="Ice machine repair in modern kitchen"
+              alt="Ice machine repair service in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -333,40 +409,7 @@ export default function IceMachineRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Ice Machine Repair – Frequently Asked Questions"
-          items={[
-            {
-              q: "Why is my ice machine not making ice?",
-              a: "The most common causes are a clogged water line, a faulty water inlet valve, low water pressure, or a defective control module. Sometimes the issue is as simple as a frozen line that needs thawing. Our technicians can quickly diagnose and fix the underlying problem.",
-            },
-            {
-              q: "Why is my ice machine producing ice slowly?",
-              a: "Slow ice production is often caused by dirty condenser coils, a clogged water filter, or low refrigerant levels. Regular cleaning and filter replacement can help, but persistent issues usually require professional service to restore normal output.",
-            },
-            {
-              q: "Why does my ice taste or smell bad?",
-              a: "Bad-tasting ice is typically caused by a dirty water filter, mineral buildup, mold growth, or absorbed odors from the freezer. Replacing the filter and a deep cleaning of the ice maker usually solves the problem.",
-            },
-            {
-              q: "Why is my ice machine leaking water?",
-              a: "Leaks are commonly caused by a clogged drain line, a damaged water supply line, a cracked ice mold, or a faulty water inlet valve. Address leaks quickly to prevent damage to your floors and surrounding cabinets.",
-            },
-            {
-              q: "Why are my ice cubes too small or hollow?",
-              a: "Small or hollow cubes usually indicate low water pressure, a clogged inlet valve, or a malfunctioning thermostat. The ice maker isn't getting enough water during the freeze cycle to form full cubes.",
-            },
-            {
-              q: "Why won't my ice machine turn on?",
-              a: "Check the power supply, circuit breaker, and on/off switch first. If those are working, the issue may be a faulty control board, thermostat, or wiring problem that needs professional diagnosis.",
-            },
-            {
-              q: "Why does my ice machine make strange noises?",
-              a: "Buzzing, grinding or rattling noises can indicate problems with the water pump, fan motor, compressor, or auger. Unusual sounds shouldn't be ignored — early diagnosis prevents costly repairs.",
-            },
-            {
-              q: "How often should I clean my ice machine?",
-              a: "We recommend a deep cleaning every 3-6 months for residential machines and monthly for commercial units. Regular maintenance prevents mineral buildup, mold, and many of the common problems above.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}

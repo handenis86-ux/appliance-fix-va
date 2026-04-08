@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "title": "Blog & Resources",
+    "subtitle": "Browse our articles by category — expert tips, troubleshooting guides and maintenance advice for every appliance in your home."
+  },
+  "categoriesSection": {
+    "eyebrow": "Categories",
+    "title": "Browse Articles by Appliance",
+    "subtitle": "Pick a category below to read all related articles."
+  },
+  "categories": [
+    {
+      "slug": "refrigerator",
+      "title": "Refrigerator",
+      "count": 12,
+      "description": "Cooling problems, ice maker issues, leaks and energy efficiency tips for fridges of all brands."
+    },
+    {
+      "slug": "oven",
+      "title": "Oven & Stove",
+      "count": 9,
+      "description": "Heating problems, igniter failures, control board issues and safe cooking troubleshooting."
+    },
+    {
+      "slug": "washer",
+      "title": "Washer",
+      "count": 8,
+      "description": "Spin cycle failures, drainage problems, vibration and front-load vs top-load comparisons."
+    },
+    {
+      "slug": "dryer",
+      "title": "Dryer",
+      "count": 7,
+      "description": "No heat, takes forever to dry, strange noises and dryer vent maintenance for fire safety."
+    },
+    {
+      "slug": "dishwasher",
+      "title": "Dishwasher",
+      "count": 10,
+      "description": "Drainage issues, dishes not cleaning, smelly dishwashers and proper loading techniques."
+    },
+    {
+      "slug": "tips",
+      "title": "Tips & Guides",
+      "count": 14,
+      "description": "Repair vs replace decisions, maintenance schedules, energy savings and appliance lifespan."
+    }
+  ]
+}

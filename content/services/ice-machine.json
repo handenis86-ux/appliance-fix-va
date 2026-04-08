@@ -1,0 +1,86 @@
+{
+  "slug": "ice-machine",
+  "hero": {
+    "eyebrow": "Arlington, Virginia",
+    "title": "Ice Machine Repair in Arlington, Virginia",
+    "subtitle": "Call by 2pm for Same-Day Service or Fast, Priority Scheduling. Whether your ice machine isn't making ice, leaks water or stopped working — our certified technicians provide quick fixes for any issue.",
+    "image": "/why-1.png",
+    "primaryCtaLabel": "I Need Service",
+    "primaryCtaHref": "/#order",
+    "secondaryCtaLabel": "Call Us 24/7 (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "whatWeFix": {
+    "eyebrow": "What We Fix",
+    "title": "Fast & Affordable In-Home Ice Machine Repair Services",
+    "subtitle": "Whether your ice machine won't make ice, produces ice slowly, or is leaking, our Arlington ice machine repair experts can fix it quickly and affordably.",
+    "intro": "Keep the ice flowing! From repairs and maintenance to faulty part replacement, our experienced technicians can help with any ice machine problem, including:"
+  },
+  "problems": [
+    "Ice machine not making ice",
+    "Slow ice production",
+    "Ice tastes or smells bad",
+    "Ice machine leaking water",
+    "Ice cubes too small or hollow",
+    "Machine won't turn on",
+    "Strange noises during operation",
+    "Frozen water line",
+    "Ice maker keeps freezing up",
+    "Control board not responding"
+  ],
+  "features": {
+    "eyebrow": "Why Choose Us",
+    "title": "Ice Machine Repair Done Right: Quality Service By Certified Experts",
+    "subtitle": "A broken ice machine is a real inconvenience. At Appliance Fix VA, we take pride in providing speedy and reliable appliance repairs at a fair price.",
+    "items": [
+      { "title": "Fast, On-Time Service", "description": "Scheduling your ice machine repair should be simple! That's why we offer flexible appointment times, including same and next-day service." },
+      { "title": "Factory-Trained Technicians", "description": "Whatever the brand or model, Appliance Fix VA is your go-to authorized service center for any ice machine repair in Arlington." },
+      { "title": "Same-Day Ice Machine Repairs", "description": "Our technicians arrive with fully stocked trucks, which means we can fix nearly any appliance issue in just a single visit — saving you stress, time and money." },
+      { "title": "Always Affordable Pricing", "description": "Forget about surprise charges or hidden fees. Before work begins, your repairman will explain what solutions are available so you know exactly what to expect." },
+      { "title": "In Your Neighborhood", "description": "With technicians throughout the state, Appliance Fix VA is your best option for quick service, no matter where you're located." }
+    ]
+  },
+  "types": [
+    "Built-In Ice Machines",
+    "Free-Standing Ice Makers",
+    "Under-Counter Ice Machines",
+    "Portable Countertop Ice Makers",
+    "Commercial Ice Machines",
+    "Refrigerator Ice Makers"
+  ],
+  "parts": [],
+  "brandsSection": {
+    "title": "Your Local Ice Machine Service Center",
+    "subtitle": "For All Major Brands & Models",
+    "description": "It doesn't matter where or when you bought your ice machine. Our authorized repair experts service nearly all major appliance models and manufacturers."
+  },
+  "brands": [
+    "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+    "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+    "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+    "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+    "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking"
+  ],
+  "faq": {
+    "title": "Ice Machine Repair – Frequently Asked Questions",
+    "items": [
+      { "q": "Why is my ice machine not making ice?", "a": "The most common causes are a clogged water line, a faulty water inlet valve, low water pressure, or a defective control module. Sometimes the issue is as simple as a frozen line that needs thawing. Our technicians can quickly diagnose and fix the underlying problem." },
+      { "q": "Why is my ice machine producing ice slowly?", "a": "Slow ice production is often caused by dirty condenser coils, a clogged water filter, or low refrigerant levels. Regular cleaning and filter replacement can help, but persistent issues usually require professional service to restore normal output." },
+      { "q": "Why does my ice taste or smell bad?", "a": "Bad-tasting ice is typically caused by a dirty water filter, mineral buildup, mold growth, or absorbed odors from the freezer. Replacing the filter and a deep cleaning of the ice maker usually solves the problem." },
+      { "q": "Why is my ice machine leaking water?", "a": "Leaks are commonly caused by a clogged drain line, a damaged water supply line, a cracked ice mold, or a faulty water inlet valve. Address leaks quickly to prevent damage to your floors and surrounding cabinets." },
+      { "q": "Why are my ice cubes too small or hollow?", "a": "Small or hollow cubes usually indicate low water pressure, a clogged inlet valve, or a malfunctioning thermostat. The ice maker isn't getting enough water during the freeze cycle to form full cubes." },
+      { "q": "Why won't my ice machine turn on?", "a": "Check the power supply, circuit breaker, and on/off switch first. If those are working, the issue may be a faulty control board, thermostat, or wiring problem that needs professional diagnosis." },
+      { "q": "Why does my ice machine make strange noises?", "a": "Buzzing, grinding or rattling noises can indicate problems with the water pump, fan motor, compressor, or auger. Unusual sounds shouldn't be ignored — early diagnosis prevents costly repairs." },
+      { "q": "How often should I clean my ice machine?", "a": "We recommend a deep cleaning every 3-6 months for residential machines and monthly for commercial units. Regular maintenance prevents mineral buildup, mold, and many of the common problems above." }
+    ]
+  },
+  "trustedName": {
+    "title": "The Trusted Name For Ice Machine Repair in Arlington",
+    "intro": "Looking for help getting the most out of your home appliances? From the kitchen to the laundry room, Appliance Fix VA is your one-stop shop for all of your appliance repair needs. Here's how it works:",
+    "steps": [
+      { "title": "Schedule Your Ice Machine Repair:", "description": "Call our 24/7 phone line, let us know about your ice machine problem and we'll find a technician to help you as soon as possible." },
+      { "title": "Your Ice Machine Gets Fixed:", "description": "Once your technician arrives, they will diagnose the problem and explain what work needs to be done. If you decide to proceed, your technician will have your ice machine fixed before you know it." }
+    ],
+    "outro": "Discover the Appliance Fix VA difference today! All you have to do is pick up the phone and call (838) 201-3789. Let us do the rest."
+  }
+}

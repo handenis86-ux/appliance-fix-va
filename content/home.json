@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "title": "Fast & Reliable Appliance Repair in Arlington, VA",
+    "subtitle": "Same-day service. Certified technicians. All major brands. Call by 6pm for Same-Day Service or Fast, Priority Scheduling.",
+    "image": "/hero.jpg",
+    "primaryCtaLabel": "Book Now",
+    "primaryCtaHref": "#order",
+    "secondaryCtaLabel": "Call (838) 201-3789",
+    "secondaryCtaHref": "tel:+18382013789"
+  },
+  "trustStrip": [
+    "Certified Technicians",
+    "We Service All Brands & Models",
+    "Same & Next Day Appointments",
+    "24-Hour Support 7 Days a Week"
+  ],
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Expert Appliance Repair Services",
+    "subtitle": "We fix all major household appliances in Arlington, VA and all surrounding areas.",
+    "items": [
+      {
+        "id": "refrigerator",
+        "title": "Refrigerator Repair",
+        "description": "Fast fixes for cooling issues, leaks and noisy compressors. Same day service available.",
+        "href": "/refrigerator-repair"
+      },
+      {
+        "id": "washer",
+        "title": "Washer Repair",
+        "description": "Expert diagnostics for leaks, draining problems and spin cycle failures on all major brands.",
+        "href": "/washer-repair"
+      },
+      {
+        "id": "dryer",
+        "title": "Dryer Repair",
+        "description": "No heat or tumbling issues? We restore your dryer's performance quickly and safely.",
+        "href": "/dryer-repair"
+      },
+      {
+        "id": "oven",
+        "title": "Oven & Stove Repair",
+        "description": "Reliable repair for gas and electric ovens. We fix heating elements and control boards.",
+        "href": "/oven-repair"
+      },
+      {
+        "id": "dishwasher",
+        "title": "Dishwasher Repair",
+        "description": "Stop hand washing. We resolve drainage issues, water leaks and power failures.",
+        "href": "/dishwasher-repair"
+      },
+      {
+        "id": "ice-machine",
+        "title": "Ice Machine Repair",
+        "description": "Fast and reliable repair for built-in and free-standing ice machines. We fix leaks, cooling issues and more.",
+        "href": "/ice-machine-repair"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us",
+    "subtitle": "Experience the best appliance repair in Arlington with our certified professionals.",
+    "items": [
+      {
+        "title": "Fast, On-Time Service",
+        "description": "Scheduling your appliance repair should be simple and stress-free. That's why we offer flexible appointment times, including same-day and next-day service, to fit your busy lifestyle. We value your time and ensure our technicians arrive promptly to get your household back to normal as quickly as possible.",
+        "image": "/why-1.png",
+        "imagePosition": "right"
+      },
+      {
+        "title": "Factory-Trained Technicians",
+        "description": "Whatever the brand or model, Appliance Fix VA is your go-to authorized service center for any home appliance repairs in Arlington. Our technicians are factory-trained and highly experienced, ensuring that your high-end or standard range receives the professional care it deserves. We take pride in providing quality service you can trust.",
+        "image": "/why-2.png",
+        "imagePosition": "left"
+      },
+      {
+        "title": "Same-Day Repairs",
+        "description": "We know you're busy, which is why our technicians arrive with fully stocked trucks. This means we can diagnose and fix nearly any appliance issue on the spot, saving you stress, time, and money. No more waiting for days for parts to arrive — we get it done right the first time.",
+        "image": "/why-3.png",
+        "imagePosition": "right"
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Real Stories From Our Customers In Arlington",
+    "subtitle": "Fast and Reliable Appliance Repairs backed by real local reviews",
+    "items": [
+      { "text": "Called about my fridge not cooling on a Sunday morning. Technician showed up by noon, found the issue fast, and had it running perfectly within an hour. Great communication the whole time.", "author": "Michael R.", "location": "Arlington, VA" },
+      { "text": "Our oven stopped heating right before a dinner party. They came same-day, diagnosed a faulty igniter, replaced it on the spot. Very professional and reasonably priced.", "author": "Jennifer L.", "location": "Crystal City, VA" },
+      { "text": "Washer was leaking everywhere. The tech was knowledgeable, explained everything clearly, and fixed it quickly. No hidden charges. Will definitely use again.", "author": "David K.", "location": "Ballston, VA" },
+      { "text": "Efficient, friendly, and on time. Fixed my dishwasher drainage problem in under 40 minutes. The technician even gave me tips on maintenance. Highly recommend.", "author": "Sarah T.", "location": "Fort Myer, VA" },
+      { "text": "My dryer wasn't heating at all. The repair guy was prompt, diagnosed the problem right away, and had a replacement part on his truck. Done in one visit. A+++ service!", "author": "Robert P.", "location": "Potomac Yard, VA" },
+      { "text": "Excellent experience from start to finish. Scheduled online, got a call back within 10 minutes, and the tech arrived the next morning. Ice maker works perfectly now.", "author": "Lisa M.", "location": "Arlington County, VA" }
+    ]
+  },
+  "stats": {
+    "headline": "+2,500",
+    "headlineLabel": "Appliances repaired in Arlington area",
+    "items": [
+      { "value": "+500", "label": "Happy clients" },
+      { "value": "+350", "label": "5-star reviews" },
+      { "value": "12", "label": "Certified techs" }
+    ],
+    "ctaTitle": "Schedule Your Home Service Today",
+    "ctaLabel": "Book Now",
+    "ctaHref": "#order"
+  },
+  "brands": {
+    "title": "Your Local Appliance Service Center",
+    "subtitle": "For All Major Brands & Models",
+    "description": "It doesn't matter where or when you bought your appliance. Our authorized repair experts service nearly all major appliance models and manufacturers.",
+    "items": [
+      "Admiral", "Amana", "Bosch", "Dacor", "Crosley", "Electrolux",
+      "Estate", "Fisher & Paykel", "Frigidaire", "General Electric", "GE Monogram", "GE Opal",
+      "GE Profile", "Gibson", "Hotpoint", "Insignia", "Jenn-Air", "Kenmore",
+      "KitchenAid", "LG", "Magic Chef", "Marvel", "Maytag", "Miele",
+      "Samsung", "Speed Queen", "Sub-Zero", "Thermador", "U-Line", "Viking"
+    ]
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "q": "How quickly can I schedule repair?", "a": "We offer same-day or next-day service appointments across Arlington, often completing repairs in a single visit." },
+      { "q": "Is there a warranty on your work?", "a": "All repairs come with a 90-day warranty on both parts and labor. We use factory-certified parts for long-term reliability." },
+      { "q": "Are your technicians certified?", "a": "Yes, our team consists of background-checked, factory-authorized experts with the latest appliance technology expertise." },
+      { "q": "Which brands do you service?", "a": "All major brands including Samsung, LG, Whirlpool, GE, Maytag, and Bosch — both premium and standard models." },
+      { "q": "How much does a service call cost?", "a": "We provide a transparent flat-rate diagnostic fee. If you proceed with repair, the fee is waived (applied toward total cost)." },
+      { "q": "Do you use original spare parts?", "a": "We only use genuine parts sourced from authorized distributors, ensuring factory-spec operation." }
+    ]
+  },
+  "trustedName": {
+    "title": "The Trusted Name For Appliance Repair in Arlington",
+    "intro": "Looking for help getting the most out of your home appliances? From the kitchen to the laundry room, Appliance Fix VA is your one-stop shop for all of your appliance repair needs. Here's how it works:",
+    "steps": [
+      { "title": "Schedule Your Appliance Repair:", "description": "Call our 24/7 phone line, let us know about your appliance problem and we'll find a technician to help you as soon as possible." },
+      { "title": "Your Appliance Gets Fixed:", "description": "Once your technician arrives, they will diagnose the problem and explain what work needs to be done. If you decide to proceed, your technician will have your appliance fixed before you know it." }
+    ],
+    "outro": "Discover the Appliance Fix VA difference today! All you have to do is pick up the phone and call (838) 201-3789. Let us do the rest."
+  }
+}

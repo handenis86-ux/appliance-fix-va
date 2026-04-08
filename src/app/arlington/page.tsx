@@ -3,17 +3,70 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { localBusinessSchema, SITE_URL, AREA_SERVED } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Appliance Repair in Arlington, VA | Appliance Fix VA",
+  title: "Appliance Repair in Arlington, VA | Service Area",
   description:
-    "Trusted appliance repair in Arlington, Virginia. Same-day service for refrigerators, washers, dryers, dishwashers, ovens and more. Call (838) 201-3789.",
+    "Local appliance repair serving Arlington, VA and nearby neighborhoods. Same-day service from certified technicians. Call (838) 201-3789 today.",
+  keywords: [
+    "appliance repair Arlington VA",
+    "Arlington Virginia appliance service",
+    "Crystal City appliance repair",
+    "Ballston appliance repair",
+    "Rosslyn appliance repair",
+    "Pentagon City appliance repair",
+    "Clarendon appliance repair",
+  ],
+  alternates: {
+    canonical: "/arlington",
+  },
   openGraph: {
+    type: "website",
+    url: "/arlington",
     title: "Appliance Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Trusted appliance repair in Arlington, VA. Same-day service available. Call (838) 201-3789.",
-    type: "website",
+      "Trusted appliance repair in Arlington, VA. Same-day service. Call (838) 201-3789.",
+    images: [
+      {
+        url: "/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Appliance repair service area in Arlington, Virginia",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Appliance Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Trusted appliance repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/hero.jpg"],
+  },
+};
+
+const areaServedSchema = {
+  "@context": "https://schema.org",
+  "@type": "Place",
+  name: "Arlington, Virginia Service Area",
+  description:
+    "Appliance Fix VA provides same-day appliance repair throughout Arlington and nearby Northern Virginia communities.",
+  containedInPlace: {
+    "@type": "AdministrativeArea",
+    name: "Arlington County, Virginia",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 38.8799697,
+    longitude: -77.1067698,
+  },
+  url: `${SITE_URL}/arlington`,
+  additionalProperty: AREA_SERVED.map((name) => ({
+    "@type": "PropertyValue",
+    name: "areaServed",
+    value: name,
+  })),
 };
 
 const services = [
@@ -80,6 +133,7 @@ const stats = [
 export default function ArlingtonPage() {
   return (
     <>
+      <JsonLd data={[localBusinessSchema, areaServedSchema]} />
       <Header />
       <main className="flex-1">
         {/* Hero */}

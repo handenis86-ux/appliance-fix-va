@@ -5,18 +5,82 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Dishwasher Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Dishwasher Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional dishwasher repair in Arlington, Virginia. Built-in, portable, countertop — same-day service, all brands. Call (838) 201-3789 for a free estimate.",
+    "Same-day dishwasher repair in Arlington, VA. Built-in, portable, countertop — all brands. Call (838) 201-3789 for a free estimate today.",
+  keywords: [
+    "dishwasher repair Arlington VA",
+    "dishwasher repair Arlington Virginia",
+    "built-in dishwasher repair",
+    "portable dishwasher repair Arlington",
+    "dishwasher not draining Arlington",
+    "Bosch dishwasher repair Arlington",
+  ],
+  alternates: {
+    canonical: "/dishwasher-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/dishwasher-repair",
     title: "Dishwasher Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional dishwasher repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day dishwasher repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/why-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Dishwasher repair technician in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dishwasher Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day dishwasher repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/why-2.png"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Why is my dishwasher not cleaning dishes properly?",
+    a: "If your dishwasher is leaving dishes dirty, greasy, or with residue, the issue is usually related to clogged spray arms, a dirty filter, low water pressure, or incorrect detergent use. Regular cleaning and proper loading can help, but persistent issues may require professional repair.",
+  },
+  {
+    q: "Why is my dishwasher not draining water?",
+    a: "Standing water at the bottom of your dishwasher is often caused by a clogged drain hose, blocked filter, or a faulty drain pump. In some cases, the issue may be connected to the garbage disposal. Address quickly to prevent odors and damage.",
+  },
+  {
+    q: "Why is my dishwasher making loud or strange noises?",
+    a: "Grinding, buzzing, or rattling sounds typically indicate something is stuck inside (like glass or debris), or there may be a worn-out motor or pump. Ignoring unusual noises can lead to more serious damage.",
+  },
+  {
+    q: "Why won't my dishwasher start?",
+    a: "If your dishwasher is not turning on, the problem could be a faulty door latch, power supply issue, or a malfunctioning control board. Electrical issues should be diagnosed by a professional technician.",
+  },
+  {
+    q: "Why is my dishwasher leaking water?",
+    a: "Leaks are commonly caused by a worn door gasket, loose or damaged hoses, or using too much detergent. Water leaks can damage your floors, so it's important to fix this issue as soon as possible.",
+  },
+  {
+    q: "Why are my dishes still wet after the cycle?",
+    a: "If your dishwasher is not drying dishes properly, it may have a faulty heating element or may be missing rinse aid. Plastic items also tend to stay wet due to their material properties.",
+  },
+  {
+    q: "Why does my dishwasher smell bad?",
+    a: "Unpleasant odors are usually caused by food buildup in the filter or drain, mold growth, or lack of regular cleaning. Routine maintenance can help prevent bad smells.",
+  },
+  {
+    q: "Why is my dishwasher cycle taking too long?",
+    a: "Long cycles can be caused by sensor issues, heating problems, or energy-efficient eco settings. If your dishwasher suddenly starts running much longer than usual, it may need inspection.",
+  },
+];
 
 const problems = [
   "Dishwasher Stopped Working",
@@ -89,6 +153,18 @@ const features = [
 export default function DishwasherRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Dishwasher Repair",
+            name: "Dishwasher Repair in Arlington, VA",
+            description:
+              "Same-day dishwasher repair in Arlington, Virginia. Certified technicians fix drainage, cleaning, leaks and control problems for built-in, portable and countertop dishwashers.",
+            path: "/dishwasher-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -119,7 +195,7 @@ export default function DishwasherRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/why-2.png"
-              alt="Dishwasher repair technician"
+              alt="Dishwasher repair technician in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -299,40 +375,7 @@ export default function DishwasherRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Dishwasher Repair – Frequently Asked Questions"
-          items={[
-            {
-              q: "Why is my dishwasher not cleaning dishes properly?",
-              a: "If your dishwasher is leaving dishes dirty, greasy, or with residue, the issue is usually related to clogged spray arms, a dirty filter, low water pressure, or incorrect detergent use. Regular cleaning and proper loading can help, but persistent issues may require professional repair.",
-            },
-            {
-              q: "Why is my dishwasher not draining water?",
-              a: "Standing water at the bottom of your dishwasher is often caused by a clogged drain hose, blocked filter, or a faulty drain pump. In some cases, the issue may be connected to the garbage disposal. Address quickly to prevent odors and damage.",
-            },
-            {
-              q: "Why is my dishwasher making loud or strange noises?",
-              a: "Grinding, buzzing, or rattling sounds typically indicate something is stuck inside (like glass or debris), or there may be a worn-out motor or pump. Ignoring unusual noises can lead to more serious damage.",
-            },
-            {
-              q: "Why won't my dishwasher start?",
-              a: "If your dishwasher is not turning on, the problem could be a faulty door latch, power supply issue, or a malfunctioning control board. Electrical issues should be diagnosed by a professional technician.",
-            },
-            {
-              q: "Why is my dishwasher leaking water?",
-              a: "Leaks are commonly caused by a worn door gasket, loose or damaged hoses, or using too much detergent. Water leaks can damage your floors, so it's important to fix this issue as soon as possible.",
-            },
-            {
-              q: "Why are my dishes still wet after the cycle?",
-              a: "If your dishwasher is not drying dishes properly, it may have a faulty heating element or may be missing rinse aid. Plastic items also tend to stay wet due to their material properties.",
-            },
-            {
-              q: "Why does my dishwasher smell bad?",
-              a: "Unpleasant odors are usually caused by food buildup in the filter or drain, mold growth, or lack of regular cleaning. Routine maintenance can help prevent bad smells.",
-            },
-            {
-              q: "Why is my dishwasher cycle taking too long?",
-              a: "Long cycles can be caused by sensor issues, heating problems, or energy-efficient eco settings. If your dishwasher suddenly starts running much longer than usual, it may need inspection.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}

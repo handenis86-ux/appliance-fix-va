@@ -5,18 +5,82 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Dryer Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Dryer Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional dryer repair in Arlington, Virginia. Gas and electric dryers — same-day service, all brands. Call (838) 201-3789 for a free estimate.",
+    "Same-day dryer repair in Arlington, VA. Gas and electric dryers, all brands. No heat, noise, won't spin. Call (838) 201-3789 for a free estimate.",
+  keywords: [
+    "dryer repair Arlington VA",
+    "dryer repair Arlington Virginia",
+    "gas dryer repair Arlington",
+    "electric dryer repair Arlington",
+    "dryer not heating Arlington",
+    "dryer vent cleaning Arlington",
+  ],
+  alternates: {
+    canonical: "/dryer-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/dryer-repair",
     title: "Dryer Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional dryer repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day dryer repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/why-1.png",
+        width: 1200,
+        height: 630,
+        alt: "Dryer repair service in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dryer Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day dryer repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/why-1.png"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Dryer Not Heating / Blowing Cold Air",
+    a: "Dryer not heating or blowing cold air is a common problem where clothes stay wet after a full cycle, usually caused by a burned-out heating element, blown thermal fuse, faulty thermostat, or gas supply issue in gas dryers.",
+  },
+  {
+    q: "Dryer Taking Too Long to Dry Clothes",
+    a: "Often means poor airflow due to a clogged dryer vent, dirty lint filter, or crushed exhaust hose, which reduces efficiency and can increase fire risk.",
+  },
+  {
+    q: "Dryer Making Loud Noises",
+    a: "Squeaking, grinding, or thumping noises typically indicate worn drum rollers, a damaged belt, loose bearings, or a failing motor that requires repair.",
+  },
+  {
+    q: "Dryer Won't Start or Turn On",
+    a: "With no lights or response, often caused by power supply issues, a faulty door switch, broken start switch, or a defective control board.",
+  },
+  {
+    q: "Dryer Stopping Mid-Cycle",
+    a: "Usually happens when overheating from blocked airflow, a defective thermal fuse, or a motor that is overheating and failing.",
+  },
+  {
+    q: "Dryer Overheating or Burning Smell",
+    a: "A serious issue often caused by lint buildup, blocked vents, or a faulty thermostat, and requires immediate attention to prevent fire hazards.",
+  },
+  {
+    q: "Dryer Drum Not Spinning",
+    a: "While the motor is running, this is commonly due to a broken drive belt, worn idler pulley, or internal motor issues affecting drum rotation.",
+  },
+  {
+    q: "Dryer Door Not Closing Properly",
+    a: "Or dryer light staying on can prevent the machine from starting and is usually caused by a faulty door switch, broken latch, or worn door seal.",
+  },
+];
 
 const problems = [
   "Dryer Not Heating / Blowing Cold Air",
@@ -80,6 +144,18 @@ const features = [
 export default function DryerRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Dryer Repair",
+            name: "Dryer Repair in Arlington, VA",
+            description:
+              "Same-day gas and electric dryer repair in Arlington, Virginia. Certified technicians fix heating, drum, vent and control issues for all major brands.",
+            path: "/dryer-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -110,7 +186,7 @@ export default function DryerRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/why-1.png"
-              alt="Dryer repair in Arlington"
+              alt="Dryer repair technician in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -259,40 +335,7 @@ export default function DryerRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Dryer Repair – Frequently Asked Questions"
-          items={[
-            {
-              q: "Dryer Not Heating / Blowing Cold Air",
-              a: "Dryer not heating or blowing cold air is a common problem where clothes stay wet after a full cycle, usually caused by a burned-out heating element, blown thermal fuse, faulty thermostat, or gas supply issue in gas dryers.",
-            },
-            {
-              q: "Dryer Taking Too Long to Dry Clothes",
-              a: "Often means poor airflow due to a clogged dryer vent, dirty lint filter, or crushed exhaust hose, which reduces efficiency and can increase fire risk.",
-            },
-            {
-              q: "Dryer Making Loud Noises",
-              a: "Squeaking, grinding, or thumping noises typically indicate worn drum rollers, a damaged belt, loose bearings, or a failing motor that requires repair.",
-            },
-            {
-              q: "Dryer Won't Start or Turn On",
-              a: "With no lights or response, often caused by power supply issues, a faulty door switch, broken start switch, or a defective control board.",
-            },
-            {
-              q: "Dryer Stopping Mid-Cycle",
-              a: "Usually happens when overheating from blocked airflow, a defective thermal fuse, or a motor that is overheating and failing.",
-            },
-            {
-              q: "Dryer Overheating or Burning Smell",
-              a: "A serious issue often caused by lint buildup, blocked vents, or a faulty thermostat, and requires immediate attention to prevent fire hazards.",
-            },
-            {
-              q: "Dryer Drum Not Spinning",
-              a: "While the motor is running, this is commonly due to a broken drive belt, worn idler pulley, or internal motor issues affecting drum rotation.",
-            },
-            {
-              q: "Dryer Door Not Closing Properly",
-              a: "Or dryer light staying on can prevent the machine from starting and is usually caused by a faulty door switch, broken latch, or worn door seal.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}

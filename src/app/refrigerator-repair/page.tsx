@@ -5,18 +5,82 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
 import FAQ from "@/components/FAQ";
+import JsonLd from "@/components/JsonLd";
+import { buildServiceSchema, buildFaqSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Refrigerator Repair in Arlington, VA | Same-Day Service | Appliance Fix VA",
+  title: "Refrigerator Repair in Arlington, VA | Same-Day Service",
   description:
-    "Professional refrigerator repair in Arlington, Virginia. Fridge not cooling, ice maker issues, leaks — same-day service, all brands. Call (838) 201-3789 for a free estimate.",
+    "Same-day refrigerator repair in Arlington, VA. Fridge not cooling, ice maker, leaks — all brands. Call (838) 201-3789 for a free estimate.",
+  keywords: [
+    "refrigerator repair Arlington VA",
+    "fridge repair Arlington Virginia",
+    "same day refrigerator repair",
+    "ice maker repair Arlington",
+    "refrigerator not cooling Arlington",
+    "Sub-Zero repair Arlington",
+  ],
+  alternates: {
+    canonical: "/refrigerator-repair",
+  },
   openGraph: {
+    type: "website",
+    url: "/refrigerator-repair",
     title: "Refrigerator Repair in Arlington, VA | Appliance Fix VA",
     description:
-      "Professional refrigerator repair in Arlington, Virginia. Same-day service. Call (838) 201-3789.",
-    type: "website",
+      "Same-day refrigerator repair in Arlington, Virginia. Call (838) 201-3789 for a free estimate.",
+    images: [
+      {
+        url: "/why-2.png",
+        width: 1200,
+        height: 630,
+        alt: "Refrigerator repair service in Arlington, Virginia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Refrigerator Repair in Arlington, VA | Appliance Fix VA",
+    description:
+      "Same-day refrigerator repair in Arlington, VA. Call (838) 201-3789.",
+    images: ["/why-2.png"],
   },
 };
+
+const faqItems = [
+  {
+    q: "Why is my refrigerator not cooling?",
+    a: "Most often due to dirty coils, airflow issues or a faulty fan, defrost system issue. Book cooling repair to fix the malfunction.",
+  },
+  {
+    q: "Why is my freezer full of ice?",
+    a: "This usually means your defrost system isn't working. It can block airflow and stop cooling. Possible causes — door seal leak, thermostat issues. This often leads to full cooling failure if ignored.",
+  },
+  {
+    q: "Why is my fridge leaking water?",
+    a: "Water inside or under your fridge. Typically caused by a clogged drain or water line issue. Book repair to stop the leak.",
+  },
+  {
+    q: "Why is my refrigerator making noise?",
+    a: "The fridge is buzzing, clicking or rattling sounds. Possible causes are compressor issues, fan problems, or start relay failure. Early diagnosis prevents expensive damage.",
+  },
+  {
+    q: "Ice maker not working — can you fix it?",
+    a: "No ice or slow production. Possible causes — frozen waterline, valve issues, ice maker failure. Often repairable without full replacement.",
+  },
+  {
+    q: "Fridge not turning on at all",
+    a: "Your fridge is completely off. Possible causes — power issue, control board failure, compressor problem. We check simple fixes first to save you money.",
+  },
+  {
+    q: "Is it worth repairing a refrigerator?",
+    a: "Yes, especially if it's under 10 years old and repair cost is less than replacement.",
+  },
+  {
+    q: "How fast can you fix it?",
+    a: "Most repairs are completed the same day or within 24-48 hours if parts are needed.",
+  },
+];
 
 const problems = [
   "Refrigerator Won't Get Cold",
@@ -80,6 +144,18 @@ const features = [
 export default function RefrigeratorRepairPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          buildServiceSchema({
+            serviceType: "Refrigerator Repair",
+            name: "Refrigerator Repair in Arlington, VA",
+            description:
+              "Same-day refrigerator and freezer repair in Arlington, Virginia. Certified technicians fix cooling issues, ice makers, leaks and compressors for all major brands.",
+            path: "/refrigerator-repair",
+          }),
+          buildFaqSchema(faqItems),
+        ]}
+      />
       <Header />
       <main className="flex-1">
         {/* HERO */}
@@ -110,7 +186,7 @@ export default function RefrigeratorRepairPage() {
           <div className="relative h-[260px] sm:h-[320px] lg:h-auto overflow-hidden">
             <Image
               src="/why-2.png"
-              alt="Refrigerator repair service"
+              alt="Refrigerator repair service in Arlington, Virginia"
               fill
               className="object-cover"
               priority
@@ -259,40 +335,7 @@ export default function RefrigeratorRepairPage() {
         {/* FAQ */}
         <FAQ
           title="Refrigerator Repair – Frequently Asked Questions"
-          items={[
-            {
-              q: "Why is my refrigerator not cooling?",
-              a: "Most often due to dirty coils, airflow issues or a faulty fan, defrost system issue. Book cooling repair to fix the malfunction.",
-            },
-            {
-              q: "Why is my freezer full of ice?",
-              a: "This usually means your defrost system isn't working. It can block airflow and stop cooling. Possible causes — door seal leak, thermostat issues. This often leads to full cooling failure if ignored.",
-            },
-            {
-              q: "Why is my fridge leaking water?",
-              a: "Water inside or under your fridge. Typically caused by a clogged drain or water line issue. Book repair to stop the leak.",
-            },
-            {
-              q: "Why is my refrigerator making noise?",
-              a: "The fridge is buzzing, clicking or rattling sounds. Possible causes are compressor issues, fan problems, or start relay failure. Early diagnosis prevents expensive damage.",
-            },
-            {
-              q: "Ice maker not working — can you fix it?",
-              a: "No ice or slow production. Possible causes — frozen waterline, valve issues, ice maker failure. Often repairable without full replacement.",
-            },
-            {
-              q: "Fridge not turning on at all",
-              a: "Your fridge is completely off. Possible causes — power issue, control board failure, compressor problem. We check simple fixes first to save you money.",
-            },
-            {
-              q: "Is it worth repairing a refrigerator?",
-              a: "Yes, especially if it's under 10 years old and repair cost is less than replacement.",
-            },
-            {
-              q: "How fast can you fix it?",
-              a: "Most repairs are completed the same day or within 24-48 hours if parts are needed.",
-            },
-          ]}
+          items={faqItems}
         />
 
         {/* NEED FAST REPAIR CTA */}
