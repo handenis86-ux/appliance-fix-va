@@ -34,7 +34,7 @@ export default function BrandsFull() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 text-center">
               <p className="text-xs uppercase tracking-[.15em] text-blue font-semibold mb-1.5">Certified Experts</p>
               <h3 className="text-xl font-bold mb-2 text-slate-900">30+ Brands We Service</h3>
               <p className="text-[13px] text-slate-500 mb-4 leading-relaxed">
