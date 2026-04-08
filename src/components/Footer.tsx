@@ -64,9 +64,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/[.06] py-3.5 flex flex-col sm:flex-row justify-between text-xs text-white/30 gap-1">
+        <div className="border-t border-white/[.06] py-3.5 flex flex-col sm:flex-row justify-between items-center text-xs text-white/30 gap-1 text-center">
           <span>&copy; 2026 Appliance Fix VA. All rights reserved.</span>
-          <span>Arlington &middot; Alexandria &middot; Fairfax &middot; Woodbridge &middot; Washington D.C.</span>
+          <span className="sm:text-right">Arlington &middot; Alexandria &middot; Fairfax &middot; Woodbridge &middot; Washington D.C.</span>
         </div>
       </div>
     </footer>

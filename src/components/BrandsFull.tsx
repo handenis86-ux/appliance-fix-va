@@ -61,7 +61,7 @@ export default function BrandsFull() {
                   className="flex items-center gap-2 py-2 text-[13px] text-slate-600 border-b border-slate-100 last:border-b-0"
                 >
                   <span className="w-1 h-1 rounded-full bg-blue flex-shrink-0" />
-                  <span className="truncate">{brand}</span>
+                  <span className="break-words">{brand}</span>
                 </div>
               ))}
             </div>

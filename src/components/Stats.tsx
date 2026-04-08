@@ -6,7 +6,7 @@ export default function Stats() {
       <div className="max-w-[1160px] mx-auto px-6">
         <div className="text-[clamp(2.4rem,5vw,3.2rem)] font-extrabold text-blue mb-1">+2,500</div>
         <p className="text-[15px] text-slate-500 mb-7">Appliances repaired in Arlington area</p>
-        <div className="flex justify-center gap-12 mb-10">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-12 mb-10">
           <div>
             <div className="text-2xl font-extrabold text-slate-900">+500</div>
             <p className="text-xs text-slate-400">Happy clients</p>

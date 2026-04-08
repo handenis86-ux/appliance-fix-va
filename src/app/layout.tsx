@@ -103,7 +103,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="min-h-full flex flex-col font-sans text-slate-700 bg-white">
+      <body className="min-h-full flex flex-col font-sans text-slate-700 bg-white pb-[84px] sm:pb-0">
         {children}
       </body>
     </html>

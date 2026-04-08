@@ -49,7 +49,7 @@ export default function OrderForm() {
           <div className="sm:col-span-2 text-center mt-1">
             <button
               type="submit"
-              className="inline-flex items-center justify-center min-w-[240px] px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+              className="inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[240px] px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
             >
               Order Service Now
             </button>

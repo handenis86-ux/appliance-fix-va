@@ -16,13 +16,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
             href="#order"
-            className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+            className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
           >
             Book Now
           </Link>
           <a
             href="tel:+18382013789"
-            className="inline-flex items-center justify-center px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
+            className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
           >
             Call (838) 201-3789
           </a>

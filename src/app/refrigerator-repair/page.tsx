@@ -171,13 +171,13 @@ export default function RefrigeratorRepairPage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/#order"
-                className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
               >
                 I Need Service
               </Link>
               <a
                 href="tel:+18382013789"
-                className="inline-flex items-center justify-center px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
               >
                 Call Us 24/7 (838) 201-3789
               </a>
@@ -240,13 +240,13 @@ export default function RefrigeratorRepairPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/#order"
-                  className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
                 >
                   Order Service Now
                 </Link>
                 <a
                   href="tel:+18382013789"
-                  className="inline-flex items-center justify-center px-[30px] py-3.5 bg-white text-slate-900 text-[15px] font-semibold rounded-md border border-slate-200 hover:border-blue hover:text-blue transition-colors"
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 bg-white text-slate-900 text-[15px] font-semibold rounded-md border border-slate-200 hover:border-blue hover:text-blue transition-colors"
                 >
                   Call (838) 201-3789
                 </a>
@@ -364,13 +364,13 @@ export default function RefrigeratorRepairPage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="/#order"
-                className="inline-flex items-center justify-center px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 bg-blue text-white text-[15px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
               >
                 Request Free Estimate
               </Link>
               <a
                 href="tel:+18382013789"
-                className="inline-flex items-center justify-center px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-[30px] py-3.5 text-white text-[15px] font-semibold rounded-md border-[1.5px] border-white/[.45] hover:border-white hover:bg-white/[.08] transition-colors"
               >
                 Call (838) 201-3789
               </a>
