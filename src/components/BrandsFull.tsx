@@ -23,25 +23,26 @@ export default function BrandsFull() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[0.45fr_0.55fr] gap-8 items-stretch">
-          {/* Left: image */}
-          <div className="relative rounded-xl overflow-hidden min-h-[280px] lg:min-h-0 order-2 lg:order-1">
-            <Image
-              src="/brands.png"
-              alt="Certified appliance repair technician"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 45vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-navy/20" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <p className="text-xs uppercase tracking-[.15em] text-white/90 font-semibold mb-1.5">Certified Experts</p>
-              <h3 className="text-xl font-bold mb-2 text-white">30+ Brands We Service</h3>
-              <p className="text-[13px] text-white/80 mb-4 leading-relaxed">
+          {/* Left: image card */}
+          <div className="bg-white rounded-xl border border-slate-200 overflow-hidden order-2 lg:order-1 flex flex-col">
+            <div className="relative h-[260px] lg:h-[320px]">
+              <Image
+                src="/brands.png"
+                alt="Modern home kitchen with appliances"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
+            </div>
+            <div className="p-6">
+              <p className="text-xs uppercase tracking-[.15em] text-blue font-semibold mb-1.5">Certified Experts</p>
+              <h3 className="text-xl font-bold mb-2 text-slate-900">30+ Brands We Service</h3>
+              <p className="text-[13px] text-slate-500 mb-4 leading-relaxed">
                 Factory-trained technicians ready to fix your appliance today.
               </p>
               <a
                 href="tel:+18382013789"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-navy text-[13px] font-semibold rounded-md hover:bg-blue-light transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue text-white text-[13px] font-semibold rounded-md hover:bg-blue-hover transition-colors"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
