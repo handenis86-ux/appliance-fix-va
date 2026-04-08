@@ -4,12 +4,11 @@ import Link from "next/link";
 import BookingModal from "./BookingModal";
 
 const services = [
-  { label: "Refrigerator Repair", href: "/#services" },
-  { label: "Washer Repair", href: "/#services" },
-  { label: "Dryer Repair", href: "/#services" },
+  { label: "Refrigerator Repair", href: "/refrigerator-repair" },
+  { label: "Washer Repair", href: "/washer-repair" },
+  { label: "Dryer Repair", href: "/dryer-repair" },
   { label: "Oven & Stove Repair", href: "/oven-repair" },
-  { label: "Dishwasher Repair", href: "/#services" },
-  { label: "Ice Machine Repair", href: "/#services" },
+  { label: "Dishwasher Repair", href: "/dishwasher-repair" },
 ];
 
 export default function Header() {

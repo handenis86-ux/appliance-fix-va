@@ -4,7 +4,7 @@ const services = [
   {
     title: "Refrigerator Repair",
     desc: "Fast fixes for cooling issues, leaks and noisy compressors. Same day service available.",
-    href: "/#services",
+    href: "/refrigerator-repair",
     icon: (
       <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" /><line x1="4" y1="10" x2="20" y2="10" /><line x1="10" y1="6" x2="10" y2="6.01" /><line x1="10" y1="14" x2="10" y2="14.01" /></svg>
     ),
@@ -12,7 +12,7 @@ const services = [
   {
     title: "Washer Repair",
     desc: "Expert diagnostics for leaks, draining problems and spin cycle failures on all major brands.",
-    href: "/#services",
+    href: "/washer-repair",
     icon: (
       <svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2" /><circle cx="12" cy="13" r="5" /><circle cx="7" cy="5" r=".8" fill="#2563eb" stroke="none" /><circle cx="9.5" cy="5" r=".8" fill="#2563eb" stroke="none" /></svg>
     ),
@@ -20,7 +20,7 @@ const services = [
   {
     title: "Dryer Repair",
     desc: "No heat or tumbling issues? We restore your dryer's performance quickly and safely.",
-    href: "/#services",
+    href: "/dryer-repair",
     icon: (
       <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="18" x2="20" y2="18" /><circle cx="8" cy="6" r="2" fill="#fff" /><circle cx="16" cy="12" r="2" fill="#fff" /><circle cx="10" cy="18" r="2" fill="#fff" /></svg>
     ),
@@ -36,7 +36,7 @@ const services = [
   {
     title: "Dishwasher Repair",
     desc: "Stop hand washing. We resolve drainage issues, water leaks and power failures.",
-    href: "/#services",
+    href: "/dishwasher-repair",
     icon: (
       <svg viewBox="0 0 24 24"><path d="M12 3l1.5 3.5L17 8l-3.5 1.5L12 13l-1.5-3.5L7 8l3.5-1.5L12 3z" /><path d="M5 16l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2z" /><path d="M19 14l.75 1.5L21.5 16.25 19.75 17 19 18.5 18.25 17 16.5 16.25l1.75-.75L19 14z" /></svg>
     ),
@@ -44,7 +44,7 @@ const services = [
   {
     title: "Ice Machine Repair",
     desc: "Fast and reliable repair for built-in and free-standing ice machines. We fix leaks, cooling issues and more.",
-    href: "/#services",
+    href: "/refrigerator-repair",
     icon: (
       <svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2" /><line x1="3" y1="10" x2="21" y2="10" /><rect x="7" y="13" width="4" height="3" rx="0.5" /><rect x="13" y="13" width="4" height="3" rx="0.5" /></svg>
     ),
