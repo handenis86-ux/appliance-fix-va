@@ -44,7 +44,7 @@ const services = [
   {
     title: "Ice Machine Repair",
     desc: "Fast and reliable repair for built-in and free-standing ice machines. We fix leaks, cooling issues and more.",
-    href: "/refrigerator-repair",
+    href: "/ice-machine-repair",
     icon: (
       <svg viewBox="0 0 24 24"><rect x="3" y="2" width="18" height="20" rx="2" /><line x1="3" y1="10" x2="21" y2="10" /><rect x="7" y="13" width="4" height="3" rx="0.5" /><rect x="13" y="13" width="4" height="3" rx="0.5" /></svg>
     ),

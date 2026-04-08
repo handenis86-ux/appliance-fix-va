@@ -9,6 +9,7 @@ const services = [
   { label: "Dryer Repair", href: "/dryer-repair" },
   { label: "Oven & Stove Repair", href: "/oven-repair" },
   { label: "Dishwasher Repair", href: "/dishwasher-repair" },
+  { label: "Ice Machine Repair", href: "/ice-machine-repair" },
 ];
 
 export default function Header() {
